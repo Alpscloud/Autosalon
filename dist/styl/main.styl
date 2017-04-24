@@ -1,0 +1,251 @@
+//Reset css
+@import '_reset.styl'
+// File with all variables styles
+@import '_vars.styl'
+// Grid
+@import '_grid.styl'
+// File with fonts
+@import '_fonts.styl'
+// File with basic style (body styles, etc)
+@import '_basic.styl'
+// File with header styles
+@import '_header.styl'
+// icons
+@import '_icons.styl'
+//interface styles (buttons, links, etc)
+@import '_interface.styl'
+// Forms style
+@import '_form.styl'
+
+
+//Section brands
+.sect__brands
+	padding 40px 0
+	background url('../img/brands-bg.png') left repeat
+	
+// Section about
+.sect__about
+	.sect__title
+		margin-bottom 60px
+		font-family $Bold
+		color $text-color
+		&:before
+			left 15px
+			transform none
+.about__text
+	color $text-color
+	font 1.4375em $Light
+	&--strong
+		margin-top 20px
+		font-family $Med
+
+// Section Services
+
+.service__item
+	position relative
+	padding 12px
+	overflow hidden
+	height 330px
+	transition all .23s ease-in-out
+	margin-bottom 30px
+	background url('../img/service-item-bg.png') center no-repeat
+	&--info
+		padding 90px 25px
+		width 100%
+		height 100%
+		border 1px solid transparent
+		color $light-color
+		transition all .5s ease-in-out
+		position relative
+		
+		
+	&--title
+		font  1.4375em $ExBold
+		text-transform uppercase
+		color $accent-color
+		position absolute
+		left 50%
+		top 50%
+		transform translate(-50%, -50%)
+		transition all .4s ease-in-out
+		
+	
+		
+	&--descr
+		margin 25px 0
+		opacity 0
+		position relative
+		transition all .6s ease-in-out
+		visibility hidden
+	
+	.btn
+
+		opacity 0
+		position relative
+		transition all .7s ease-in-out
+		visibility hidden
+		
+	&:hover
+		
+		.service__item--info
+			border-color $light-color
+		.service__item--title
+			color $light-color
+			top 30px
+			transform translate(-50%, 0)
+		.service__item--descr
+			opacity 1
+			visibility visible
+		.btn
+			opacity 1
+			visibility visible
+			
+// Section adv
+.adv__block
+	position relative
+	color $light-text-color
+	margin-bottom 70px
+	&--title
+		margin-bottom 20px
+		font 1.75em $Med
+		text-transform uppercase
+		color $dark-color
+	
+
+	.count
+		position absolute
+		top -7px
+		left -25px
+		color $accent-color
+		font-size 6.875em
+		opacity .7
+		z-index -1
+		line-height 1
+		
+// Section feedbacks
+// .sect__feedback
+// 	.btn
+// 		margin-top 80px
+.feedback__item
+	display table
+	margin-bottom 60px
+	
+	&--info
+		display table-cell
+		vertical-align middle
+		text-align left
+		padding-left 20px
+		color $light-color
+		font .9em $Light
+	&--title
+		color $accent-color 
+		font-size 1.1875em
+		margin-bottom 15px
+
+
+		
+.hex
+	width 175px
+	position relative
+	&__photo
+		height 100px
+		background url('../img/feedback-photo.png') center no-repeat
+		.top,
+		.bottom
+			content ''
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			overflow hidden
+			background inherit
+			&:after
+				content ''
+				position absolute
+				top -50%
+				left 0
+				width 100%
+				height 200%
+				background inherit
+		.top
+			transform rotate(60deg)
+			&:after
+				transform rotate(-60deg)
+		.bottom
+			transform rotate(-60deg)
+			&:after
+				transform rotate(60deg)
+		
+	&__small
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		border-right 1px solid $accent-color
+		border-left 1px solid $accent-color
+		width 130px
+		height 75px
+		z-index 5
+		&:after,
+			&:before
+				content ''
+				position absolute
+				top 0
+				left 0
+				width 100%
+				height 100%
+				border-right 1px solid $accent-color
+				border-left 1px solid $accent-color
+				
+			&:after
+				transform rotate(-60deg)
+			&:before	
+				transform rotate(60deg)		
+		
+// Section map
+.sect__map
+	position relative
+.google__map
+	height 460px
+	#map
+		height 100%
+		
+.contacts
+	position absolute
+	top 50%
+	transform translateY(-50%)
+	left 0
+	width 100%
+	z-index 5
+	pointer-events none
+	&__block
+		background #fdfdfd
+		padding 20px 15px
+		text-align left
+		color #3c3c3c
+		max-width 320px
+		pointer-events auto
+		box-shadow 0px 5px 20px 0px rgba($dark-color, 0.5)
+	h3
+		text-transform uppercase
+		font 1.25em $Bold
+		margin-bottom 20px
+		
+	&__item
+		margin-bottom 20px
+		p
+			&:not([class="contacts__item--text"])
+				font 1.125em $Bold
+			
+		&--text
+			color #3c3c3c
+			a
+				color #3c3c3c
+				margin-left 5px
+				display inline-block
+
+	
+@import '_footer.styl'
+// File with media quaeries styles
+@import '_media.styl'

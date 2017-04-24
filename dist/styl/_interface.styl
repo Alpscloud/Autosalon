@@ -1,0 +1,141 @@
+@import '_vars.styl'
+
+.btn
+	display inline-block
+	text-align center
+	transition all .23s ease-in-out
+	border-radius 10px
+	font 1em $Reg
+	&__accent
+		color $dark-color
+		background $accent-color
+		padding 10px 50px
+		&:hover
+			background darken($accent-color, 20%)
+	&__callback
+		font-size 0.875em
+		padding 10px 13px
+		
+	&__close
+		width 26px
+		height 26px
+		border-radius 50%
+		border 2px solid $accent-color
+		background $light-color
+		text-align center
+		position absolute
+		right -13px
+		top -13px
+		
+	&__up
+		display none
+		border-radius 50%
+		width 40px
+		height 40px
+		position fixed
+		right 30px
+		bottom 30px
+		background $accent-color
+		z-index 10
+		text-align center
+		transition all .23s ease-in-out
+		box-shadow 0px 0px 13px 0px rgba($dark-color, 0.21)
+		&:after
+			content ''
+			display inline-block
+			position absolute
+			top 15px
+			left 10px
+			width 20px
+			height 20px
+			transform rotate(-45deg)
+			border-top 1px solid $dark-color
+			border-right 1px solid $dark-color
+			transition all .23s ease-in-out
+		&:hover
+			background  $dark-color
+			transform scale(1.1)
+			box-shadow 0px 0px 13px 0px rgba($accent-color, 0.21)
+			&:after
+				border-top 1px solid $accent-color
+				border-right 1px solid $accent-color
+				
+.hamburger
+	display none
+	width 30px
+	height 30px
+	cursor pointer
+	span
+		display block
+		width 100%
+		height 4px
+		background $dark-color
+		margin-bottom 3px
+		&:last-child
+			margin-bottom 0
+
+
+.overlay
+	width 100%
+	height 100%
+	position fixed
+	background rgba($dark-color, .92)
+	z-index -1
+	top 0
+	left 0
+	transition all .3s ease-in-out
+	visibility hidden
+	opacity 0
+	&.active
+		z-index 15
+		opacity 1
+		visibility visible
+		
+.thankyou
+	position fixed
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
+	width 100%
+	max-width 400px
+	background #1a1a1a
+	background rgba(#1a1a1a, .85)
+	padding 25px
+	z-index -1
+	transition all .3s ease-in-out
+	visibility hidden
+	opacity 0
+	color $light-color
+	border-bottom 4px solid $accent-color
+	border-radius 10px
+	&__title
+		font 1.3em $Med
+		text-transform uppercase
+		margin-bottom 25px
+		color $accent-color
+
+	&.active
+		z-index 45
+		opacity 1
+		visibility visible
+		
+.popup
+	text-align center
+	position fixed
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
+	width 100%
+	max-width 400px
+	z-index -1
+	transition all .3s ease-in-out
+	visibility hidden
+	opacity 0
+
+	&.active
+		z-index 35
+		opacity 1
+		visibility visible
+		
+	.form
+		border-bottom 4px solid $accent-color

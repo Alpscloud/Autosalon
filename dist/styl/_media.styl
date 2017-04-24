@@ -1,0 +1,201 @@
+// Media queris mixins add there
+@import '../../node_modules/stylus-media-queries/index.styl'
+/* -------Screen sizes----------- 
++screen(minWidth, maxWidth)
++max-screen(maxWidth)
++min-screen(minWidth)
++screen-height(minHeight, maxHeight)
++max-screen-height(maxHeight)
++min-screen-height(minHeight)
+*/
++max-screen(1400px)
+	.nav__header
+		margin-bottom 50px
+	.header
+		padding-bottom 50px
+		
++max-screen(1200px)
+	.nav__list--item
+		margin-right 20px
++max-screen(1000px)
+	body
+		font-size 14px
+	.box
+		padding 40px 0
+	.sect__title
+		margin-bottom 40px
+	
+	.header
+		padding-top 100px
+	
+	.logo__header
+		small
+			color $dark-color
+		&:hover
+			h2
+				color $dark-color
+	
+	.nav__header
+		position fixed
+		top 0
+		left 0
+		width 100%
+		background $light-color
+		color $dark-color
+		z-index 10
+		box-shadow 0px 5px 20px 0px rgba($dark-color, 0.5)
+		margin-bottom 0
+		.nav__list
+			position absolute
+			top 100%
+			left 0
+			width 100%
+			background $light-color
+			display none
+			&--item
+				display block
+				border-bottom 1px solid $accent-color
+				margin-right 0
+				&:last-child
+					border-bottom 0
+			&--link
+				padding 10px 0
+				text-align center
+				color $dark-color
+				
+		.nav__row
+			padding 15px 0
+		.phones
+			&__link
+				color $dark-color
+				display inline-block
+				margin-bottom 0
+				margin-right 5px
+	.hamburger
+		display inline-block
+	
+	.hex
+		margin 0 auto
+	.feedback__item
+		margin-top 60px
+		margin-bottom 40px
+		&--info
+			display block
+			padding-left 0
+			margin-top 60px
+			text-align center
+		
++max-screen(767px)
+	.sect__feedback
+		.btn
+			margin-top 0
+	.feedback__item
+		margin-bottom 30px
+		display block
+	.copy
+		text-align center
+		margin-bottom 20px
+	.developed
+		text-align center
+		
+
+	.google__map
+		height 200px
+	.contacts
+		position relative
+		transform none
+		margin 25px 0
+		&__block
+			margin 0 auto
+			
+	.adv__block
+		padding-left 30px
+		margin-bottom 25px
+		.count
+			left 5px
+	
+	.header
+		padding-bottom 40px
+		&__title
+			margin-bottom 25px
+			text-align center
+			
+	.service__item
+		height 250px
+		background-size cover !important
+		&--descr,
+		.btn
+			opacity 1
+			visibility visible
+		
+		&:hover
+			.service__item--title
+				top 0
+				left auto
+				transform none
+		&--info
+			padding 25px
+			border 1px solid $light-color
+		&--title
+			position relative
+			top 0
+			transform none
+			left auto
+			color $light-color
+			
++max-screen(700px)
+	body
+		font-size 12px
+	.header
+		padding-top 140px
+	.nav__header
+		.nav__row
+			display block
+	.logo__header
+
+		margin 0 auto 10px auto
+	
+	.hamburger
+		position absolute
+		right 30px
+		top 15px
+	
+	.sect__brands
+		padding 20px 0
+		
+	.btn__up
+		right 10px
+	
+
+	
+	.nav__footer
+		.nav__row
+			display block
+			text-align center
+		
+		.nav__list
+			margin 15px 0
+			
++max-screen(450px)
+	.nav__footer
+		.nav__list
+			&--item
+				display block
+				margin-right 0
+			&--link
+				padding 10px 0
+				
+	.btn__close
+		right 5px
+			
+		
+
++max-screen(350px)
+	.hamburger
+		bottom 55px
+		top auto
+	.phones
+		text-align left
+		.btn
+			margin-top 10px
+			width 100%

@@ -1,0 +1,32 @@
+==========================
+
+Url
+http://atsto.ru/
+
+===========================
+
+Admin panel:
+http://atsto.ru/wp-admin
+
+===========================
+
+Login: autoservice
+Pw: autoservice2017
+
+===========================
+
+Hosting:
+Панель: https://hosting.timeweb.ru 
+Логин: cb96747 
+Пароль: qio8lWvRbrpz 
+
+
+FTP: ftp://vh64.timeweb.ru 
+Логин: cb96747 
+Пароль: qio8lWvRbrpz
+
+DataBase:
+имя: cb96747_auto
+логин: cb96747_auto
+пароль: auto
+===========================
