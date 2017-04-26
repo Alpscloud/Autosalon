@@ -1,6 +1,7 @@
 @import '_vars.styl'
 
 .form
+	
 	background $form-bg
 	border-radius 10px
 	color $light-color
@@ -60,7 +61,22 @@
 		
 	&__descr
 		margin-top 25px
+	&__callback
+		.form__input--wrapp
+			width 100%
+			max-width 380px
+		input
+			margin-bottom 0
+			height 40px
+
+		.btn
+			display table-cell
+			vertical-align middle
+			font-family $ExBold
+			height 40px
+			text-transform uppercase
 		
+			
 
 	&__input--row
 		margin-bottom 25px
@@ -104,10 +120,11 @@
 			
 .more__search
 	text-transform uppercase
-	border-bottom 1px solid $light-color
+	text-decoration underline
 	color $light-color
 	&:hover
 		color $accent-color
+		text-decoration underline
 
 		
 .form__input::-webkit-input-placeholder

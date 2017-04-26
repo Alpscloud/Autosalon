@@ -206,7 +206,7 @@
 		&:after,
 		&:before
 			content ''
-			width 75px
+			width 0
 			height 2px 
 			background $accent-color
 			position absolute
@@ -215,8 +215,10 @@
 			transform translateY(-50%)
 		&:after
 			right 40px
+			animation elongation 3s linear infinite
 		&:before
 			left 40px
+			animation elongation 3s linear infinite
 	i.fa
 		font-size 30px
 		color $accent-color
@@ -228,3 +230,9 @@
 
 		100%
 			transform rotate(360deg)
+			
+	@keyframes elongation
+		0
+			width 0
+		100%
+			width 100px

@@ -35,7 +35,7 @@
 		margin-bottom 15px
 		a
 			font 1.3625em $Bold
-			display block
+			display inline-block
 			color $light-color
 			&:hover
 				color $accent-color
@@ -105,7 +105,7 @@
 	padding 0
 	border-bottom 2px solid #d3d5d7
 	border-right 2px solid #d3d5d7
-	height 300px
+	height 250px
 	transition all .23s ease-in-out
 	&:nth-child(3n)
 		border-right 0
@@ -121,7 +121,7 @@
 .adv__block
 	position relative
 	color $light-text-color
-	padding 15px
+	padding 30px
 	&--title
 		font 1.3125em $Med
 		text-transform uppercase
@@ -136,7 +136,16 @@
 
 		
 	
-
+// Section seo
+.sect__seo--descr
+	font 1.25em $Reg
+	color $light-color
+	
+// Sect callback
+.sect__callback
+	background url('../img/callback-bg.png') center no-repeat
+	background-size cover !important
+	background-attachment fixed !important
 		
 // Section map
 .sect__map

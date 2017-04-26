@@ -23,7 +23,8 @@ h1,h2,h3,h4,h5,h6,ul,li
 	padding 0
 
 input,
-textarea
+textarea,
+select
 	outline none
 	&:focus
 		outline none
@@ -98,7 +99,7 @@ img
 		position absolute
 		top 0
 		left 0
-		background rgba($dark-color, .46)
+		background rgba($dark-color, .54)
 		
 .sect__title
 	font  2.1875em $Light
@@ -126,6 +127,8 @@ img
 	text-align center
 	font 1.125em $light
 	margin-bottom 50px
+	&--light
+		color $light-color
 	
 .sect__bg
 	background $dark-sect-bg
