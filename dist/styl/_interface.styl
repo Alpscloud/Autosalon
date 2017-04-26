@@ -26,6 +26,12 @@
 		position absolute
 		right -13px
 		top -13px
+	&__border
+		border-bottom 3px solid darken($accent-color, 20%)
+		color $dark-color
+		text-transform uppercase
+		font 1em $Reg
+		
 		
 	&__up
 		display none
@@ -139,3 +145,86 @@
 		
 	.form
 		border-bottom 4px solid $accent-color
+		
+
+// Loader
+.body-main
+	#loader-wrapper
+		position fixed
+		top 0
+		left 0
+		width 100%
+		height 100%
+		z-index 1000
+		.loader-section
+			position fixed
+			top 0
+			width 51%
+			height 100%
+			background $dark-color
+			z-index 1000
+			transform translateX(0)
+			&.section-left
+				left 0
+			&.section-right
+				right 0
+
+	#loader
+		display block
+		position absolute
+		transform translate(-50%,-50%)
+		left 50%
+		top 50%
+		z-index 1001
+		text-align center
+		.logo
+			margin-bottom 20px
+			
+
+	&.loaded
+		#loader-wrapper
+			visibility hidden
+			transition all 0.3s 1s ease-out
+			.loader-section
+				&.section-left
+					transform translateX(-100%)
+					transition all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000)
+				&.section-right
+					transform translateX(100%)
+					transition all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000)
+		#loader
+			opacity 0
+			transition all 0.3s ease-out
+		.loader-gear
+			opacity 0
+			transition all 0.3s ease-out
+			
+.loader-gear
+	span
+		position relative
+		display inline-block
+		&:after,
+		&:before
+			content ''
+			width 75px
+			height 2px 
+			background $accent-color
+			position absolute
+			display inline-block
+			top 50%
+			transform translateY(-50%)
+		&:after
+			right 40px
+		&:before
+			left 40px
+	i.fa
+		font-size 30px
+		color $accent-color
+		animation rotation 2s linear infinite
+
+	@keyframes rotation
+		0 
+			transform rotate(0)
+
+		100%
+			transform rotate(360deg)

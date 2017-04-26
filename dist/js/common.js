@@ -61,6 +61,11 @@ window.addEventListener('DOMContentLoaded', function() {
 // ========= ========= ========= JQUERY =========== ========= =========
 $(document).ready(function() {
 
+	// Loader
+	setTimeout(function(){
+        $('.body-main').addClass('loaded');
+    }, 3000);
+
 	$('.js-service').each(function() {
 		$(this).on('click', function () {
 			var title = $(this).parent().find('.service__item--title').text(),

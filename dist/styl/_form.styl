@@ -44,6 +44,9 @@
 					z-index -1
 		&.validate
 			border-color red
+		&--label
+			margin-bottom 5px
+			
 	&__title
 		display inline-block
 		background $form-title-bg
@@ -57,6 +60,55 @@
 		
 	&__descr
 		margin-top 25px
+		
+
+	&__input--row
+		margin-bottom 25px
+		.form__input--wrapp
+			width 48%
+			div,
+			.form__input--select
+				position relative
+				&:after
+					content ''
+					border 6px solid transparent
+					border-top 6px solid #c0c0c0
+					position absolute
+					top 50%
+					margin-top 5px
+					transform translateY(-50%)
+					right 10px
+					pointer-events none
+			div.price
+				&:after
+					display none
+			&:first-child
+				margin-right 1%
+			select
+				width 100%
+				margin-bottom 0
+				cursor pointer
+			.required
+				right 30px
+	&__input--select
+		width 47%
+		&:first-child
+			margin-right 1%
+			
+	&__btn--row
+		display flex
+		justify-content space-between
+		align-items center
+		.btn
+			width 48%
+			
+.more__search
+	text-transform uppercase
+	border-bottom 1px solid $light-color
+	color $light-color
+	&:hover
+		color $accent-color
+
 		
 .form__input::-webkit-input-placeholder
 	color #c0c0c0

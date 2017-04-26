@@ -7,6 +7,14 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Serhii Kuptsov">
 	<title>Project Title</title>
+
+	<!-- Chrome, Firefox, Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
 	<!-- All libs styles -->
 	<link rel="stylesheet" href="css/libs.min.css">
 	<!-- Main file with styles -->
@@ -20,13 +28,35 @@
 	<![endif]-->
 
 </head>
-<body>
+<body id="body" class="main-body2">
 	
 	<!-- CONTENT WRAPPER -->
 	<div class="content_wrapper">
 		<!-- Overlay -->
 		<div class="overlay" id="overlay" data-id="close"></div>
 		<!-- //Overlay -->
+
+		<!-- Loader -->
+		<div id="loader-wrapper">
+			<div id="loader">
+
+				<!-- Logo -->
+				<a href="#" class="logo logo__loader">
+					<img src="img/logo-footer.png" alt="АвтоТрейд" class="logo__img">
+					<h2 class="logo__title">Автотрейд<small>автомобили с пробегом</small></h2>
+				</a>
+				<!-- //Logo -->
+				<div class="loader-gear">
+					<span>
+						<i class="fa fa-cog" aria-hidden="true"></i>
+					</span>
+				</div>
+				
+			</div>
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+		</div>		
+		<!-- //Loader -->
 
 		<!-- Thanks -->
 		<div class="thankyou text-center" id="thanks">
@@ -39,320 +69,449 @@
 		<button type="button" class="btn__up"></button>
 		<!-- //Btn up -->
 
-		<!-- Popup -->
-		<div class="popup" id="popup">
-			<button class="btn__close js-close" type="button" data-id="close">x</button>
-			<!-- Callback form -->
-			<div class="popup__item">
-				<form  class="form form__header form__contact text-center">
-					<!-- Hidden inputs -->
-					<input type="hidden" name="project_name" value="Заявка с сайта АТ-ЦЕНТР СТО">
-					<input type="hidden" name="admin_email" value="winde100kg@gmail.com">
-					<input type="hidden" name="form_subject" value="Обратный звонок">
-					<!-- // Hidden inputs -->		
-					<h3 class="form__title">Заказать обратный звонок</h3>
-					<div class="form__input--wrapp">
-						<input type="text" class="form__input form__input--validate" name="Имя" placeholder="Ваше имя*">
-						<span class="required hidden">Незаполнено поле!</span>
-					</div>
-					<div class="form__input--wrapp">
-						<input type="tel" class="form__input form__input--validate" name="Телефон" placeholder="Телефон*">
-						<span class="required hidden">Незаполнено поле!</span>
-					</div>
-					<button type="submit" class="btn btn__accent">Отправить</button>
-					<p class="form__descr">Мы перезвоним Вам в<br>ближайшее время</p>
-				</form>
-			</div>
-			
-			<!-- //Callback form -->
-		
-		</div>
-		<!-- //popup -->
-
-		<!-- Popup -->
-		<div class="popup" id="popupService">
-			<button class="btn__close js-close" type="button" data-id="close">x</button>
-			<!-- Callback form -->
-			<div class="popup__item">
-				<form  class="form form__header form__contact text-center">
-					<!-- Hidden inputs -->
-					<input type="hidden" name="project_name" value="Заявка с сайта АТ-ЦЕНТР СТО">
-					<input type="hidden" name="admin_email" value="winde100kg@gmail.com">
-					<input type="hidden" name="form_subject" class="mail__theme" value="" >
-					<!-- // Hidden inputs -->	
-					<h3 class="form__title">&nbsp;</h3>
-					<div class="form__input--wrapp">
-						<input type="text" class="form__input form__input--validate" name="Имя" placeholder="Ваше имя*">
-						<span class="required hidden">Незаполнено поле!</span>
-					</div>
-					<div class="form__input--wrapp">
-						<input type="tel" class="form__input form__input--validate" name="Телефон" placeholder="Телефон*">
-						<span class="required hidden">Незаполнено поле!</span>
-					</div>
-					<textarea name="Проблема" class="form__input form__input--textarea " placeholder="Кратко опишите проблему"></textarea>
-					<button type="submit" class="btn btn__accent">Отправить</button>
-					<p class="form__descr">Мы перезвоним Вам в<br>ближайшее время</p>
-				</form>
-			</div>
-			
-			<!-- //Callback form -->
-		
-		</div>
-		<!-- //popup -->
-
 		<!-- Header -->
-		<header class="header" style="background: url('img/header-bg.png') top no-repeat;" >
-			<!-- Nav -->
-			<nav class="nav nav__header">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="nav__row">
-								<!-- Logo -->
-								<a href="#" class="logo logo__header">
-									<img src="img/logo-header.png" alt="АвтоТрейд" class="logo__img">
-									<h2 class="logo__title">АТ-Центр СТО<small>автосервис высокого качества</small></h2>
-								</a>
-								<!-- //Logo -->
-								<ul class="nav__list">
-									<li class="nav__list--item"><a href="#about" class="nav__list--link smoothScroll-link">О нас</a></li>
-									<li class="nav__list--item"><a href="#services" class="nav__list--link smoothScroll-link">Наши услуги</a></li>
-									<li class="nav__list--item"><a href="#advantages" class="nav__list--link smoothScroll-link">Почему мы?</a></li>
-									<li class="nav__list--item"><a href="#contacts" class="nav__list--link smoothScroll-link">Контакты</a></li>
-								</ul>
-								<div class="phones text-center">
-									<a href="tel:" class="phones__link">(066) 445-25-37</a>
-									<a href="tel:" class="phones__link">(066) 445-25-37</a>
-									<button class="btn btn__accent btn__callback" type="button" id="callbackBtn" data-id="show">Заказать звонок</button>
-								</div>
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="nav__row">
+							<!-- Logo -->
+							<a href="#" class="logo logo__header">
+								<img src="img/logo-header.png" alt="АвтоТрейд" class="logo__img">
+								<h2 class="logo__title">Автотрейд<small>автомобили с пробегом</small></h2>
+							</a>
+							<!-- //Logo -->
 
-								<!-- Sandwitch menu -->
-								<button type="button" id="hamburger" class="hamburger">
-									<span class="line"></span>	
-									<span class="line"></span>	
-									<span class="line"></span>	
-								</button>
-								<!-- //Sandwitch menu -->
+							<address class="address">г. Харьков, ул. Пушкинская 89</address>
 
+							<div class="phones text-center">
+								<a href="tel:" class="phones__link">(066) 445-25-37</a>
+								<a href="tel:" class="phones__link">(066) 445-25-37</a>
 							</div>
+
+							<!-- Link -->
+							<div class="autoservice">
+								<a href="http://atsto.ru/" class="btn btn__accent btn__border" target="_blank">
+									<strong>автосервис АТ-центр</strong><br>
+									<small>информация и запись</small>
+								</a>
+							</div>
+							<!-- //Link -->
+
+							<!-- Sandwitch menu -->
+							<button type="button" id="hamburger" class="hamburger">
+								<span class="line"></span>	
+								<span class="line"></span>	
+								<span class="line"></span>	
+							</button>
+							<!-- //Sandwitch menu -->
+
 						</div>
 					</div>
-					<!-- //row -->
 				</div>
-				<!-- //container -->
-				
+				<!-- //row -->
+			</div>
+			<!-- //container -->
+
+			<!-- Navigation -->
+			<nav class="nav__menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="nav__menu--list">
+								<li class="nav__menu--item"><a href="#" class="nav__menu--link active">Главная</a></li>
+								<li class="nav__menu--item"><a href="#" class="nav__menu--link">О компании</a></li>
+								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Купить</a></li>
+								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Продать</a></li>
+								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Обменять</a></li>
+								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Автосервис</a></li>
+								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Финансовые услуги</a></li>
+								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Акции</a></li>
+								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Контакты</a></li>		
+							</ul>
+						</div>
+					</div>
+				</div>
 			</nav>
-			<!-- //Nav -->
+			<!--// Navigation -->
+			
+		</header>
+		<!-- //Header -->
+
+		<!-- Section first block -->
+		<section class="sect__first" style="background: url('img/header-bg.png') top no-repeat;" >
+
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<h1 class="header__title">Давно выяснено, что при оценке дизайна и композиции</h1>
 					</div>
-					<div class="col-md-4 col-md-offset-2 col-sm-6 col-xs-12">
+					<div class="col-md-6  col-sm-6 col-xs-12">
+						<!-- Search form -->
 						<form  class="form form__header form__contact text-center">
-							<!-- Hidden inputs -->
-							<input type="hidden" name="project_name" value="Заявка с сайта АТ-ЦЕНТР СТО">
-							<input type="hidden" name="admin_email" value="winde100kg@gmail.com">
-							<input type="hidden" name="form_subject" class="mail__theme" value="Запись на обслуживание и консультацию" >
-							<!-- // Hidden inputs -->	
-							<h3 class="form__title">запись на обслуживание<br>и консультацию</h3>
-							<div class="form__input--wrapp">
-								<input type="text" class="form__input form__input--validate" name="Имя*" placeholder="Ваше имя">
-								<span class="required hidden">Незаполнено поле!</span>
+							<!-- Title -->
+							<h3 class="form__title">Подобрать авто</h3>
+							<!-- //Title -->
+
+							<!-- Form input row -->
+							<div class="form__input--row clearfix">
+								<!-- Select item -->
+								<div class="form__input--wrapp left">
+									<p class="form__input--label text-left">Марка</p>
+									<div>
+										<select name="Марка" class="form__input form__input--validate">
+											<option value="" selected>Все марки</option>
+											<option value="Mercedes Benz">Mercedes Benz</option>
+											<option value="BMW">BMW</option>
+											<option value="Lada">Lada</option>
+											<option value="Range Rover">Range Rover</option>
+											<option value="Bentley">Bentley</option>
+											<option value="Audi">Audi</option>
+											<option value="Aston Martin">Aston Martin</option>
+										</select>
+										<span class="required hidden">Не выбрано!</span>
+									</div>
+									
+								</div>
+								<!-- //Select item -->
+								<!-- Select item -->
+								<div class="form__input--wrapp right">
+									<p class="form__input--label text-left">Модель</p>
+									<div>
+										<select name="Модель" class="form__input">
+											<option value="" selected>Все модели</option>
+											<option value="Mercedes Benz">Mercedes Benz</option>
+											<option value="BMW">BMW</option>
+											<option value="Lada">Lada</option>
+										</select>
+									</div>
+								</div>
+								<!-- //Select item -->
 							</div>
-							<div class="form__input--wrapp">
-								<input type="tel" class="form__input form__input--validate" name="Телефон*" placeholder="Телефон">
-								<span class="required hidden">Незаполнено поле!</span>
+							<!-- //Form input row -->
+
+							<!-- Form input row -->
+							<div class="form__input--row clearfix">
+								<!-- Select item -->
+								<div class="form__input--wrapp left">
+									<p class="form__input--label text-left">Год выпуска</p>
+									<div>
+										<select name="Год выпуска" class="form__input">
+											<option value="" selected>Не важно</option>
+											<option value="1992">1992</option>
+											<option value="1992">1992</option>
+										</select>
+									</div>
+								</div>
+								<!-- //Select item -->
+								<!-- Select item -->
+								<div class="form__input--wrapp price right">
+									<p class="form__input--label text-left">Цена</p>
+									<div class="form__input--select left">
+										<select name="Цена" class="form__input">
+											<option value="" disabled selected>От</option>
+											<option value="30000 руб">30000 руб</option>
+											<option value="30000 руб">30000 руб</option>
+											<option value="30000 руб">30000 руб</option>
+										</select>
+									</div>
+									<div class="form__input--select right">
+										<select name="Цена" class="form__input">
+											<option value="" disabled selected>До</option>
+											<option value="30000 руб">30000 руб</option>
+											<option value="30000 руб">30000 руб</option>
+											<option value="30000 руб">30000 руб</option>
+										</select>
+									</div>
+								</div>
+								<!-- //Select item -->
 							</div>
-							<textarea name="Проблема" class="form__input form__input--textarea" placeholder="Кратко опишите проблему"></textarea>
-							<button type="submit" class="btn btn__accent">Записаться</button>
-							<p class="form__descr">Мы перезвоним Вам в<br>ближайшее время</p>
+							<!-- //Form input row -->
+							
+							<div class="form__btn--row">
+								<button type="submit" class="btn btn__accent">Найти</button>
+								<a href="#" class="more__search">Расширенный поиск</a>
+							</div>
 						</form>
-					</div>
-				</div>
-				<!-- //row -->
-			</div>
-			<!-- //container -->
-		</header>
-		<!-- //Header -->
-
-		<!-- Setion brands -->
-		<section class="sect__brands">
-			<h2 class="w3c">&nbsp;</h2>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="brands__img">
-							<img src="img/brands-sprite.png" alt="">
-						</div>
+						<!-- //Search form -->
 					</div>
 				</div>
 				<!-- //row -->
 			</div>
 			<!-- //container -->
 		</section>
-		<!-- //Setion brands -->
+		<!-- //Section first block -->
 
-		<!-- Section about us -->
-		<section class="sect__about box" id="about">
-			<h2 class="sect__title text-left container">Мы весёлые ребята!<br>Мы используем только лучшие детали!</h2>
-			<div class="container">
-				<div class="row">
-					<div class=" col-md-5 col-sm-12 col-xs-12">
-						<div class="about__text text-left" >
-							<p>Потому, что Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, чтоДавно выяснено, что при оценке дизайна и композиции читаемый текст мешает потому, что Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</p>
-							<div class="about__text--strong">
-								<p>Потому, что Давно выяснено, что при оценке дизайна и композиции читаемый !</p>
-							</div>
-						</div>
-					</div>
-					<div class=" col-md-7 col-sm-12 col-xs-12">
-						<div class="car__img">
-							<img src="img/car-img.png" alt="">
-						</div>
-					</div>
-				</div>
-				<!-- //row -->
-			</div>
-			<!-- //container -->
-		</section>
-		<!-- //Section about us -->
 
-		<!-- Section services -->
-		<section class="box sect__services sect__overlay" id="services">
-			<h2 class="sect__title sect__title--text container">Наши услуги</h2>
+		<!-- Section special -->
+		<section class="sect__special box">
+			<h2 class="sect__title sect__title--text container">Специальные предложения</h2>
 			<div class="sect__descr container">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, optio molestias tempora deserunt laudantium perferendis esse dolor quo ducimus voluptatibus.</p>
 			</div>
 
 			<div class="container">
 				<div class="row">
-					<!-- Service item -->
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="service__item" style="background: url('img/service-item-bg.png') center no-repeat;">
-							<!-- Info -->
-							<div class="service__item--info text-center">
-								<h3 class="service__item--title">Установка сигнализаций</h3>
-								<p class="service__item--descr">Давно выяснено, что при оценке дизайна и композиции выяснено, что при оценке дизайна </p>
-								<button type="button" class="btn btn__accent js-service">Записаться</button>
+					<!-- Card item -->
+					<div class="col-md-4">
+						<div class="auto__item">
+							<div class="auto__item--thumb">
+								<img src="img/example-item-img.png" alt="">
 							</div>
-							<!-- //Info -->
+							<div class="auto__item--descr text-left">
+								<h3 class="auto__item--title">
+									<a href="#">Toyota Land Cruiser 200</a>
+								</h3>
+								<p class="auto__item--info"><span class="accent">Цена:</span> $4000</p>
+								<p class="auto__item--info"><span class="accent">Год:</span> 2009</p>
+								<p class="auto__item--info"><span class="accent">Пробег:</span> 92000 км</p>
+								<div class="text-center">
+									<a href="#" class="btn btn__accent">Подробнее</a>
+								</div>
+								
+							</div>
 						</div>
 					</div>
-					<!-- //Service item -->
-					<!-- Service item -->
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="service__item" style="background: url('img/service-item-bg-2.png') center no-repeat;">
-							<!-- Info -->
-							<div class="service__item--info text-center">
-								<h3 class="service__item--title">Ремонт кузова</h3>
-								<p class="service__item--descr">Давно выяснено, что при оценке дизайна и композиции выяснено, что при оценке дизайна </p>
-								<button type="button" class="btn btn__accent js-service">Записаться</button>
+					<!-- //Card item -->
+
+					<!-- Card item -->
+					<div class="col-md-4">
+						<div class="auto__item">
+							<div class="auto__item--thumb">
+								<img src="img/example-item-img-2.png" alt="">
 							</div>
-							<!-- //Info -->
+							<div class="auto__item--descr text-left">
+								<h3 class="auto__item--title">
+									<a href="#">BMW x6</a>
+								</h3>
+								<p class="auto__item--info"><span class="accent">Цена:</span> $4000</p>
+								<p class="auto__item--info"><span class="accent">Год:</span> 2009</p>
+								<p class="auto__item--info"><span class="accent">Пробег:</span> 92000 км</p>
+								<div class="text-center">
+									<a href="#" class="btn btn__accent">Подробнее</a>
+								</div>
+							</div>
 						</div>
 					</div>
-					<!-- //Service item -->
-					<!-- Service item -->
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="service__item" style="background: url('img/service-item-bg.png') center no-repeat;">
-							<!-- Info -->
-							<div class="service__item--info text-center">
-								<h3 class="service__item--title">Замена подвески</h3>
-								<p class="service__item--descr">Давно выяснено, что при оценке дизайна и композиции выяснено, что при оценке дизайна </p>
-								<button type="button" class="btn btn__accent js-service">Записаться</button>
+					<!-- //Card item -->
+
+					<!-- Card item -->
+					<div class="col-md-4">
+						<div class="auto__item">
+							<div class="auto__item--thumb">
+								<img src="img/example-item-img-3.png" alt="">
 							</div>
-							<!-- //Info -->
+							<div class="auto__item--descr text-left">
+								<h3 class="auto__item--title">
+									<a href="#">Toyota Land Cruiser 200</a>
+								</h3>
+								<p class="auto__item--info"><span class="accent">Цена:</span> $4000</p>
+								<p class="auto__item--info"><span class="accent">Год:</span> 2009</p>
+								<p class="auto__item--info"><span class="accent">Пробег:</span> 92000 км</p>
+								<div class="text-center">
+									<a href="#" class="btn btn__accent">Подробнее</a>
+								</div>
+							</div>
 						</div>
 					</div>
-					<!-- //Service item -->
-					<!-- Service item -->
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="service__item" style="background: url('img/service-item-bg-2.png') center no-repeat;">
-							<!-- Info -->
-							<div class="service__item--info text-center">
-								<h3 class="service__item--title">Покраска</h3>
-								<p class="service__item--descr">Давно выяснено, что при оценке дизайна и композиции выяснено, что при оценке дизайна </p>
-								<button type="button" class="btn btn__accent js-service">Записаться</button>
-							</div>
-							<!-- //Info -->
-						</div>
-					</div>
-					<!-- //Service item -->
-					<!-- Service item -->
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="service__item" style="background: url('img/service-item-bg.png') center no-repeat;">
-							<!-- Info -->
-							<div class="service__item--info text-center">
-								<h3 class="service__item--title">Сервисное обслуживание</h3>
-								<p class="service__item--descr">Давно выяснено, что при оценке дизайна и композиции выяснено, что при оценке дизайна </p>
-								<button type="button" class="btn btn__accent js-service">Записаться</button>
-							</div>
-							<!-- //Info -->
-						</div>
-					</div>
-					<!-- //Service item -->
-					<!-- Service item -->
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="service__item" style="background: url('img/service-item-bg-2.png') center no-repeat;">
-							<!-- Info -->
-							<div class="service__item--info text-center">
-								<h3 class="service__item--title">Шлифовка</h3>
-								<p class="service__item--descr">Давно выяснено, что при оценке дизайна и композиции выяснено, что при оценке дизайна </p>
-								<button type="button" class="btn btn__accent js-service">Записаться</button>
-							</div>
-							<!-- //Info -->
-						</div>
-					</div>
-					<!-- //Service item -->
-	
+					<!-- //Card item -->
 				</div>
 				<!-- //row -->
 			</div>
 			<!-- //container -->
-			
+		</section>
+		<!-- //Section special -->
 
+		<!-- Section catalog -->
+		<section class="box sect__cat text-center sect__overlay" style="background: url('img/catalog-bg.png') center no-repeat;">
+			<h2 class="w3c">&nbsp;</h2>
+			<a href="#" class="btn btn__accent">просмотреть полный каталог</a>
+		</section>
+		<!-- //Section catalog -->
+
+		<!-- Section new -->
+		<section class="sect__new box">
+			<h2 class="sect__title sect__title--text container">новые поступления</h2>
+			<div class="sect__descr container">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, optio molestias tempora deserunt laudantium perferendis esse dolor quo ducimus voluptatibus.</p>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<!-- Card item -->
+					<div class="col-md-4">
+						<div class="auto__item">
+							<div class="auto__item--thumb">
+								<img src="img/example-item-img.png" alt="">
+							</div>
+							<div class="auto__item--descr text-left">
+								<h3 class="auto__item--title">
+									<a href="#">Toyota Land Cruiser 200</a>
+								</h3>
+								<p class="auto__item--info"><span class="accent">Цена:</span> $4000</p>
+								<p class="auto__item--info"><span class="accent">Год:</span> 2009</p>
+								<p class="auto__item--info"><span class="accent">Пробег:</span> 92000 км</p>
+								<div class="text-center">
+									<a href="#" class="btn btn__accent">Подробнее</a>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<!-- //Card item -->
+
+					<!-- Card item -->
+					<div class="col-md-4">
+						<div class="auto__item">
+							<div class="auto__item--thumb">
+								<img src="img/example-item-img-2.png" alt="">
+							</div>
+							<div class="auto__item--descr text-left">
+								<h3 class="auto__item--title">
+									<a href="#">BMW x6</a>
+								</h3>
+								<p class="auto__item--info"><span class="accent">Цена:</span> $4000</p>
+								<p class="auto__item--info"><span class="accent">Год:</span> 2009</p>
+								<p class="auto__item--info"><span class="accent">Пробег:</span> 92000 км</p>
+								<div class="text-center">
+									<a href="#" class="btn btn__accent">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //Card item -->
+
+					<!-- Card item -->
+					<div class="col-md-4">
+						<div class="auto__item">
+							<div class="auto__item--thumb">
+								<img src="img/example-item-img-3.png" alt="">
+							</div>
+							<div class="auto__item--descr text-left">
+								<h3 class="auto__item--title">
+									<a href="#">Toyota Land Cruiser 200</a>
+								</h3>
+								<p class="auto__item--info"><span class="accent">Цена:</span> $4000</p>
+								<p class="auto__item--info"><span class="accent">Год:</span> 2009</p>
+								<p class="auto__item--info"><span class="accent">Пробег:</span> 92000 км</p>
+								<div class="text-center">
+									<a href="#" class="btn btn__accent">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //Card item -->
+				</div>
+				<!-- //row -->
+			</div>
+			<!-- //container -->
+		</section>
+		<!-- //Section new -->
+		
+
+		<!-- Section services -->
+		<section class="sect__services">
+			<div class="services__row clearfix">
+				<!-- Item -->
+				<a href="#" class="service__item" style="background: url('img/service-item-bg.png') center no-repeat;">
+					<span class="service__item--descr">
+						<span>заявка на автосервис заявка на автосервис</span>
+					</span>		
+				</a>
+				<!-- //Item -->
+				<!-- Item -->
+				<a href="#" class="service__item" style="background: url('img/service-item-bg-2.png') center no-repeat;">
+					<span class="service__item--descr">
+						<span>заявка на автосервис</span>
+					</span>		
+				</a>
+				<!-- //Item -->
+				<!-- Item -->
+				<a href="#" class="service__item" style="background: url('img/service-item-bg.png') center no-repeat;">
+					<span class="service__item--descr">
+						<span>заявка на автосервис заявка</span>
+					</span>		
+				</a>
+				<!-- //Item -->
+				<!-- Item -->
+				<a href="#" class="service__item" style="background: url('img/service-item-bg-2.png') center no-repeat;">
+					<span class="service__item--descr">
+						<span>заявка на автосервис</span>
+					</span>		
+				</a>
+				<!-- //Item -->
+			</div>
 		</section>
 		<!-- //Section services -->
 
 		<!-- Section adv -->
-		<section class="sect__adv box" id="advantages">
-			<h2 class="sect__title container">Почему мы</h2>
+		<section class="sect__adv box">
+			<h2 class="sect__title container">Наши преимущества</h2>
 			<div class="container">
 				<div class="row">
 					<!-- adv item -->
-					<div class="col-sm-6 col-xs-12">
-						<div class="adv__block text-left">
-							<span class="count">1</span>
-							<h3 class="adv__block--title">Почему мы?</h3>
-							<p>Качественный ремонт – опыт работы c 2004 года! </p>
+					<div class="col-sm-4 col-xs-12 adv__item">
+						<div class="adv__block text-center">
+							<!-- Icon -->
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 39.53 39.53" style="enable-background:new 0 0 39.53 39.53;" xml:space="preserve" class="adv__block--ic">
+<g>
+	<g>
+		<path d="M36.12,4.855h-5.526c-0.112-1.936-0.554-3.311-1.315-4.082c-0.607-0.619-1.427-0.879-2.349-0.734    c-2.586,0.404-2.692,3.702-2.653,4.816H13.228c-0.114-1.923-0.555-3.287-1.312-4.057c-0.607-0.616-1.422-0.871-2.348-0.732    c-2.569,0.4-2.689,3.681-2.654,4.789H3.409c-0.957,0-1.737,0.779-1.737,1.737v31.202c0,0.957,0.78,1.736,1.737,1.736h21.168    c0.613,0,1.316-0.287,1.82-0.736c0.131-0.099,0.242-0.209,0.338-0.34l10.387-13.763c0.429-0.563,0.736-1.487,0.736-2.194V6.592    C37.859,5.634,37.079,4.855,36.12,4.855z M27.208,1.801c0.336-0.055,0.587,0.005,0.801,0.223c0.439,0.447,0.716,1.423,0.799,2.831    h-2.746C26.017,3.948,26.143,1.967,27.208,1.801z M9.845,1.829c0.339-0.058,0.588,0.008,0.8,0.223    c0.439,0.444,0.714,1.41,0.799,2.804H8.7C8.68,4.157,8.712,2.004,9.845,1.829z M26.314,36.433V24.416    c0-0.103,0.082-0.184,0.184-0.184h9.023L26.314,36.433z M36.304,22.497c0,0.053-0.006,0.116-0.02,0.192    c-0.055-0.006-0.108-0.01-0.164-0.01h-9.623c-0.959,0-1.738,0.778-1.738,1.737v13.377c0,0.052,0.002,0.103,0.006,0.151    c-0.072,0.021-0.138,0.03-0.188,0.03H3.407c-0.101,0-0.183-0.081-0.183-0.184V13.332h33.08V22.497z M36.306,11.548H3.226V6.592    H3.225c0-0.102,0.082-0.183,0.183-0.183h8.056c-0.011,0.392-0.032,0.796-0.063,1.206c-0.729,0.261-1.22,0.934-1.22,1.705    c0,1.017,0.827,1.844,1.844,1.844s1.844-0.827,1.844-1.844c0-0.551-0.251-1.055-0.697-1.409c0.043-0.512,0.071-1.015,0.082-1.502    h15.571c-0.012,0.442-0.037,0.901-0.076,1.366c-0.538,0.338-0.866,0.915-0.866,1.545c0,1.017,0.825,1.844,1.844,1.844    c1.017,0,1.845-0.827,1.845-1.844c0-0.692-0.402-1.323-1.021-1.633c0.033-0.429,0.056-0.857,0.065-1.278h5.506    c0.101,0,0.184,0.081,0.184,0.183V11.548z">
+		<path d="M6.931,21.277h0.91c1.147,0,2.081-0.934,2.081-2.081v-0.91c0-1.147-0.934-2.08-2.081-2.08h-0.91    c-1.147,0-2.08,0.934-2.08,2.08v0.91C4.851,20.343,5.784,21.277,6.931,21.277z M6.634,18.286c0-0.163,0.133-0.297,0.297-0.297    h0.91c0.164,0,0.297,0.134,0.297,0.297v0.91c0,0.164-0.134,0.298-0.297,0.298h-0.91c-0.164,0-0.297-0.134-0.297-0.298V18.286z">
+		<path d="M13.213,21.277h0.91c1.147,0,2.081-0.934,2.081-2.081v-0.91c-0.001-1.147-0.934-2.08-2.081-2.08    h-0.91c-1.147,0-2.081,0.934-2.081,2.08v0.91C11.132,20.343,12.066,21.277,13.213,21.277z M12.915,18.286    c0-0.163,0.134-0.297,0.297-0.297h0.91c0.164,0,0.297,0.134,0.297,0.297v0.91c0,0.164-0.134,0.298-0.297,0.298h-0.91    c-0.164,0-0.297-0.134-0.297-0.298V18.286z">
+		<path d="M19.495,21.277h0.91c1.146,0,2.08-0.934,2.08-2.081v-0.91c0-1.147-0.934-2.08-2.08-2.08h-0.91    c-1.147,0-2.082,0.934-2.082,2.08v0.91C17.414,20.343,18.348,21.277,19.495,21.277z M19.197,18.286    c0-0.163,0.134-0.297,0.296-0.297h0.91c0.164,0,0.299,0.134,0.299,0.297v0.91c0,0.164-0.135,0.298-0.299,0.298h-0.91    c-0.164,0-0.296-0.134-0.296-0.298V18.286z">
+		<path d="M6.931,27.163h0.91c1.147,0,2.081-0.935,2.081-2.082v-0.91c0-1.146-0.934-2.08-2.081-2.08h-0.91    c-1.147,0-2.08,0.934-2.08,2.08v0.91C4.851,26.228,5.784,27.163,6.931,27.163z M6.634,24.17c0-0.164,0.133-0.297,0.297-0.297h0.91    c0.164,0,0.297,0.133,0.297,0.297v0.91c0,0.164-0.134,0.297-0.297,0.297h-0.91c-0.164,0-0.297-0.133-0.297-0.297V24.17z">
+		<path d="M13.213,27.163h0.91c1.147,0,2.081-0.935,2.081-2.082v-0.91c-0.001-1.146-0.934-2.08-2.081-2.08    h-0.91c-1.147,0-2.081,0.934-2.081,2.08v0.91C11.132,26.228,12.066,27.163,13.213,27.163z M12.915,24.17    c0-0.164,0.134-0.297,0.297-0.297h0.91c0.164,0,0.297,0.133,0.297,0.297v0.91c0,0.164-0.134,0.297-0.297,0.297h-0.91    c-0.164,0-0.297-0.133-0.297-0.297V24.17z">
+		<path d="M19.495,27.163h0.91c1.146,0,2.08-0.935,2.08-2.082v-0.91c0-1.146-0.934-2.08-2.08-2.08h-0.91    c-1.147,0-2.082,0.934-2.082,2.08v0.91C17.414,26.228,18.348,27.163,19.495,27.163z M19.197,24.17    c0-0.164,0.134-0.297,0.296-0.297h0.91c0.164,0,0.299,0.133,0.299,0.297v0.91c0,0.164-0.135,0.297-0.299,0.297h-0.91    c-0.164,0-0.296-0.133-0.296-0.297V24.17z">
+		<path d="M6.931,33.047h0.91c1.147,0,2.081-0.935,2.081-2.08v-0.911c0-1.146-0.934-2.08-2.081-2.08h-0.91    c-1.147,0-2.08,0.935-2.08,2.08v0.911C4.851,32.113,5.784,33.047,6.931,33.047z M6.634,30.056c0-0.163,0.133-0.298,0.297-0.298    h0.91c0.164,0,0.297,0.135,0.297,0.298v0.911c0,0.162-0.134,0.297-0.297,0.297h-0.91c-0.164,0-0.297-0.135-0.297-0.297V30.056z">
+		<path d="M13.213,33.047h0.91c1.147,0,2.081-0.935,2.081-2.08v-0.911c-0.001-1.146-0.934-2.08-2.081-2.08    h-0.91c-1.147,0-2.081,0.935-2.081,2.08v0.911C11.132,32.113,12.066,33.047,13.213,33.047z M12.915,30.056    c0-0.163,0.134-0.298,0.297-0.298h0.91c0.164,0,0.297,0.135,0.297,0.298v0.911c0,0.162-0.134,0.297-0.297,0.297h-0.91    c-0.164,0-0.297-0.135-0.297-0.297V30.056z">
+		<path d="M19.495,33.047h0.91c1.146,0,2.08-0.935,2.08-2.08v-0.911c0-1.146-0.934-2.08-2.08-2.08h-0.91    c-1.147,0-2.082,0.935-2.082,2.08v0.911C17.414,32.113,18.348,33.047,19.495,33.047z M19.197,30.056    c0-0.163,0.134-0.298,0.296-0.298h0.91c0.164,0,0.299,0.135,0.299,0.298v0.911c0,0.162-0.135,0.297-0.299,0.297h-0.91    c-0.164,0-0.296-0.135-0.296-0.297V30.056z">
+		<path d="M25.777,21.277h0.91c1.146,0,2.081-0.934,2.081-2.081v-0.91c0-1.147-0.935-2.08-2.081-2.08h-0.91    c-1.146,0-2.08,0.934-2.08,2.08v0.91C23.697,20.343,24.631,21.277,25.777,21.277z M25.48,18.286c0-0.163,0.135-0.297,0.297-0.297    h0.91c0.164,0,0.299,0.134,0.299,0.297v0.91c0,0.164-0.135,0.298-0.299,0.298h-0.91c-0.162,0-0.297-0.134-0.297-0.298V18.286z">
+		<path d="M32.058,21.277h0.91c1.146,0,2.081-0.934,2.081-2.081v-0.91c0-1.147-0.933-2.08-2.081-2.08h-0.91    c-1.146,0-2.08,0.934-2.08,2.08v0.91C29.978,20.343,30.911,21.277,32.058,21.277z M31.761,18.286c0-0.163,0.134-0.297,0.297-0.297    h0.91c0.164,0,0.298,0.134,0.298,0.297v0.91c0,0.164-0.134,0.298-0.298,0.298h-0.91c-0.163,0-0.297-0.134-0.297-0.298V18.286z">
+	</g>
+</g>
+
+</svg>
+
+
+							<h3 class="adv__block--title">Опыт работы с 2004 года</h3>
 						</div>
 					</div>
 					<!-- //adv item -->
 					<!-- adv item -->
-					<div class="col-sm-6 col-xs-12">
-						<div class="adv__block text-left">
-							<span class="count">2</span>
-							<h3 class="adv__block--title">Почему к нам стоит  обратиться?</h3>
-							<p>Широкий спектр услуг по ремонту автомобилей любой марки.</p>
+					<div class="col-sm-4 col-xs-12 adv__item">
+						<div class="adv__block text-center">
+							<h3 class="adv__block--title">Только проверенные автомобили</h3>
 						</div>
 					</div>
 					<!-- //adv item -->
 					<!-- adv item -->
-					<div class="col-sm-6 col-xs-12">
-						<div class="adv__block text-left">
-							<span class="count">3</span>
-							<h3 class="adv__block--title">Почему мы лучшие?</h3>
-							<p>Тщательный учет особенностей конкретной машины и пожеланий владельца авто.</p>
+					<div class="col-sm-4 col-xs-12 adv__item">
+						<div class="adv__block text-center">
+							<h3 class="adv__block--title">Прозрачность сделки </h3>
 						</div>
 					</div>
 					<!-- //adv item -->
 					<!-- adv item -->
-					<div class="col-sm-6 col-xs-12">
-						<div class="adv__block text-left">
-							<span class="count">4</span>
-							<h3 class="adv__block--title">Почему нас рекомендуют?</h3>
-							<p>Индивидуальный подход к каждому автовладельцу.</p>
+					<div class="col-sm-4 col-xs-12 adv__item">
+						<div class="adv__block text-center">
+							<h3 class="adv__block--title">Дополнительные услуги на месте</h3>
+						</div>
+					</div>
+					<!-- //adv item -->
+					<!-- adv item -->
+					<div class="col-sm-4 col-xs-12 adv__item">
+						<div class="adv__block text-center">
+							<h3 class="adv__block--title">Качественный автосервис</h3>
+	
+						</div>
+					</div>
+					<!-- //adv item -->
+					<!-- adv item -->
+					<div class="col-sm-4 col-xs-12 adv__item">
+						<div class="adv__block text-center">
+							<h3 class="adv__block--title">Индивидуальный подход</h3>
 						</div>
 					</div>
 					<!-- //adv item -->
@@ -363,74 +522,6 @@
 		</section>
 		<!-- //Section adv -->
 
-		<!-- Section feedback -->
-		<section class="sect__feedback box sect__bg">
-			<h2 class="sect__title sect__title--light container">отзывы о нашей работе</h2>
-			<div class="container">
-				<div class="row">
-					<!-- Feedback item -->
-					<div class="col-sm-6 col-xs-12">
-						<div class="feedback__item">
-							<div class="hex">
-								<div class="hex__photo" style="background: url('img/feedback-photo.png') center no-repeat;">
-									<div class="top"></div>
-									<div class="bottom"></div>
-								</div>
-								<div class="hex__small"></div>
-							</div>
-							<div class="feedback__item--info">
-								<h4 class="feedback__item--title">Андрей Андреев, Город</h4>
-								<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. </p>
-							</div>
-						</div>
-					</div>
-					<!-- //Feedback item -->
-					<!-- Feedback item -->
-					<div class="col-sm-6 col-xs-12">
-						<div class="feedback__item">
-							<div class="hex">
-								<div class="hex__photo" style="background: url('img/feedback-photo.png') center no-repeat;">
-									<div class="top"></div>
-									<div class="bottom"></div>
-								</div>
-								<div class="hex__small"></div>
-							</div>
-							<div class="feedback__item--info">
-								<h4 class="feedback__item--title">Андрей Андреев, Город</h4>
-								<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или</p>
-							</div>
-						</div>
-					</div>
-					<!-- //Feedback item -->
-					<!-- Feedback item -->
-					<div class="col-sm-6 col-xs-12">
-						<div class="feedback__item">
-							<div class="hex">
-								<div class="hex__photo" style="background: url('img/feedback-photo.png') center no-repeat;">
-									<div class="top"></div>
-									<div class="bottom"></div>
-								</div>
-								<div class="hex__small"></div>
-							</div>
-							<div class="feedback__item--info">
-								<h4 class="feedback__item--title">Андрей Андреев, Город</h4>
-								<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более илио при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более илио при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или</p>
-							</div>
-						</div>
-					</div>
-					<!-- //Feedback item -->
-				</div>
-				<!-- //row -->
-
-				<div class="row">
-					<div class="col-xs-12 text-center">
-						<button class="btn btn__accent js-feedback" type="button">Оставить свой отзыв</button>
-					</div>
-				</div>
-			</div>
-			<!-- //container -->
-		</section>
-		<!-- //Section feedback -->
 
 		<!-- Section contacts -->
 		<section class="sect__map" id="contacts">
@@ -483,9 +574,8 @@
 							<ul class="nav__list">
 								<li class="nav__list--item"><a href="#" class="nav__list--link">Купить автомобиль</a></li>
 								<li class="nav__list--item"><a href="#" class="nav__list--link">Продать автомобиль</a></li>
-								<li class="nav__list--item"><a href="#" class="nav__list--link">Автосервис</a></li>
+								<li class="nav__list--item"><a href="http://atsto.ru/" class="nav__list--link" target="_blank">Автосервис</a></li>
 								<li class="nav__list--item"><a href="#" class="nav__list--link">Контакты</a></li>
-								<li class="nav__list--item"><button  type="button" class="nav__list--link js-feedback">Оставить отзыв</button></li>
 							</ul>
 							<div class="social">
 								<a href="#" class="social__link social__link--inst" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -532,8 +622,7 @@
 	<!-- Main file with scripts -->
 	<script src="js/common.min.js"></script>
 
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 
 </html>

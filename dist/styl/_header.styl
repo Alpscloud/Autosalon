@@ -6,6 +6,7 @@
 		display flex
 		justify-content space-between
 		align-items center
+		padding 20px 0
 	&__list
 		text-align center
 		&--item
@@ -20,8 +21,6 @@
 			width 100%
 			&:hover
 				color $accent-color
-	&__header
-		margin-bottom 160px
 	&__footer
 		padding-bottom 20px
 		margin-bottom 20px
@@ -29,6 +28,29 @@
 		.nav__list--link
 			font-size  0.75em
 			text-transform uppercase
+			
+
+	&__menu
+		padding 12px 0
+		border-top 2px solid #3b3b3b
+		width 100%
+		background #1a1a1a
+		background rgba(#1a1a1a, .85)
+		position relative
+		z-index 1
+		&--list
+			display flex
+			justify-content space-between
+			align-items center
+		&--item
+			display inline-block
+		&--link
+			font 1em $Reg
+			color $light-color
+			&:hover
+				color $accent-color
+			&.active
+				color $accent-color
 .logo
 	display inline-block
 	&__img
@@ -37,17 +59,22 @@
 		margin-right 5px
 	
 	&__header
-		color $accent-color
+		color $dark-color
 		display table
 		.logo__img
 			display table-cell
 			vertical-align middle
 		&:hover
 			h2
-				color $light-color
+				color $accent-color
 			small
 				color $accent-color
-		
+	&__loader
+		img
+			margin-right 0
+			margin-bottom 10px
+		h2
+			color $light-color
 				
 
 	&__title
@@ -58,26 +85,82 @@
 		small
 			display block
 			font .5em $Reg
-			color $light-color
+			color #c0c0c0
+			letter-spacing 2px
 			transition all .23s ease-in-out
 		
 .phones
+	position relative
+	padding-left 35px
+	font 1.125em $Med
+	&:before
+		content "\f095"
+		font normal normal normal 14px/1 FontAwesome
+		font-size 2em
+		color $accent-color
+		text-rendering auto
+		-webkit-font-smoothing antialiased
+		-moz-osx-font-smoothing grayscale
+		display inline-block
+		position absolute
+		position absolute
+		left 0
+		top 50%
+		transform translateY(-50%)
 	&__link
-		font 1.125em $Med
-		color $light-color
+		font inherit
+		color $dark-color
 		display inline-block
 		margin-bottom 5px
 		display block
 		
 		&:hover
 			color $accent-color
+.address
+	font 1.125em $Med
+	color $dark-color
+	display inline-block
+	position relative
+	padding-left 25px
+	&:before
+		content "\f041"
+		font normal normal normal 14px/1 FontAwesome
+		font-size 2em
+		color $accent-color
+		text-rendering auto
+		-webkit-font-smoothing antialiased
+		-moz-osx-font-smoothing grayscale
+		display inline-block
+		position absolute
+		width 20px
+		position absolute
+		left 0
+		top 50%
+		transform translateY(-50%)
+	
+.autoservice
+	.btn
+		text-align center
+		color #1c1c1c
+		strong
+			font 1.125em $ExBold
+		small
+			font 0.75em $Reg
+			
 		
 	
-.header
-	padding 12px 0 120px 0
+.sect__first
+	padding 180px 0 130px 0
 	background url('../img/header-bg.png') top no-repeat 
 	background-size cover !important
 	background-attachment fixed !important
+	margin-top -48px
+	position relative
+
+	
+.header
+	i.fa
+		
 	&__title
 		color $light-color
 		font 2.5em $Bold

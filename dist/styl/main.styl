@@ -17,191 +17,126 @@
 // Forms style
 @import '_form.styl'
 
-
-//Section brands
-.sect__brands
-	padding 40px 0
-	background url('../img/brands-bg.png') left repeat
 	
-// Section about
-.sect__about
-	.sect__title
-		margin-bottom 60px
-		font-family $Bold
-		color $text-color
-		&:before
-			left 15px
-			transform none
-.about__text
-	color $text-color
-	font 1.4375em $Light
-	&--strong
-		margin-top 20px
-		font-family $Med
-
+// Auto card
+.auto__item
+	border 1px solid $dark-color
+	&--thumb
+		height 100%
+		min-height 180px
+		img
+			display block
+			height 180px
+	&--descr
+		padding 25px 15px
+		background $dark-color
+		color $light-color
+	&--title
+		margin-bottom 15px
+		a
+			font 1.3625em $Bold
+			display block
+			color $light-color
+			&:hover
+				color $accent-color
+	&--info
+		font-size 1.2em
+		.accent
+			color $accent-color
+			display inline-block
+			margin-right 5px
+			font 1em $Med
+			
+	.btn
+		margin 15px auto 0 auto
+			
+// Section cat
+.sect__cat
+	background url('../img/catalog-bg.png') center no-repeat
+	background-size cover !important
+	background-attachment fixed !important
+	.btn
+		text-transform uppercase
+		font 1em $Bold
+	
+.sect__cat,
+.sect__callback
+	.btn
+		position relative
+		z-index 3
 // Section Services
-
 .service__item
 	position relative
-	padding 12px
-	overflow hidden
-	height 330px
-	transition all .23s ease-in-out
-	margin-bottom 30px
+	
+	display block
+	width 25%
+	height 200px
+	float left
 	background url('../img/service-item-bg.png') center no-repeat
-	&--info
-		padding 90px 25px
+	background-size cover !important
+	
+	text-transform uppercase
+	overflow hidden
+	padding 10px
+	text-align center
+
+	&--descr
 		width 100%
 		height 100%
+		display table
 		border 1px solid transparent
-		color $light-color
-		transition all .5s ease-in-out
-		position relative
-		
-		
-	&--title
-		font  1.4375em $ExBold
-		text-transform uppercase
+		transition all .23s ease-in-out
+		font 1.875em $ExBold
 		color $accent-color
-		position absolute
-		left 50%
-		top 50%
-		transform translate(-50%, -50%)
-		transition all .4s ease-in-out
-		
-	
-		
-	&--descr
-		margin 25px 0
-		opacity 0
-		position relative
-		transition all .6s ease-in-out
-		visibility hidden
-	
-	.btn
-
-		opacity 0
-		position relative
-		transition all .7s ease-in-out
-		visibility hidden
-		
+		span
+			display table-cell
+			vertical-align middle
+			
+			
 	&:hover
-		
-		.service__item--info
-			border-color $light-color
-		.service__item--title
+		color $light-color
+		> span
+			border-color $accent-color
 			color $light-color
-			top 30px
-			transform translate(-50%, 0)
-		.service__item--descr
-			opacity 1
-			visibility visible
-		.btn
-			opacity 1
-			visibility visible
+		
 			
 // Section adv
+.adv__item
+	padding 0
+	border-bottom 2px solid #d3d5d7
+	border-right 2px solid #d3d5d7
+	height 300px
+	transition all .23s ease-in-out
+	&:nth-child(3n)
+		border-right 0
+	&:nth-child(4),
+	&:nth-child(5),
+	&:nth-child(6)
+		border-bottom none
+	&:hover
+		svg
+			fill $dark-color
+	
+
 .adv__block
 	position relative
 	color $light-text-color
-	margin-bottom 70px
+	padding 15px
 	&--title
-		margin-bottom 20px
-		font 1.75em $Med
+		font 1.3125em $Med
 		text-transform uppercase
-		color $dark-color
+		color $dark-sect-bg
+	&--ic
+		width 80px
+		height 80px
+		fill $accent-color
+		transition all .23s ease-in-out
+		display inline-block
+		margin-bottom 25px
+
+		
 	
 
-	.count
-		position absolute
-		top -7px
-		left -25px
-		color $accent-color
-		font-size 6.875em
-		opacity .7
-		z-index -1
-		line-height 1
-		
-// Section feedbacks
-// .sect__feedback
-// 	.btn
-// 		margin-top 80px
-.feedback__item
-	display table
-	margin-bottom 60px
-	
-	&--info
-		display table-cell
-		vertical-align middle
-		text-align left
-		padding-left 20px
-		color $light-color
-		font .9em $Light
-	&--title
-		color $accent-color 
-		font-size 1.1875em
-		margin-bottom 15px
-
-
-		
-.hex
-	width 175px
-	position relative
-	&__photo
-		height 100px
-		background url('../img/feedback-photo.png') center no-repeat
-		.top,
-		.bottom
-			content ''
-			position absolute
-			top 0
-			left 0
-			width 100%
-			height 100%
-			overflow hidden
-			background inherit
-			&:after
-				content ''
-				position absolute
-				top -50%
-				left 0
-				width 100%
-				height 200%
-				background inherit
-		.top
-			transform rotate(60deg)
-			&:after
-				transform rotate(-60deg)
-		.bottom
-			transform rotate(-60deg)
-			&:after
-				transform rotate(60deg)
-		
-	&__small
-		position absolute
-		top 50%
-		left 50%
-		transform translate(-50%, -50%)
-		border-right 1px solid $accent-color
-		border-left 1px solid $accent-color
-		width 130px
-		height 75px
-		z-index 5
-		&:after,
-			&:before
-				content ''
-				position absolute
-				top 0
-				left 0
-				width 100%
-				height 100%
-				border-right 1px solid $accent-color
-				border-left 1px solid $accent-color
-				
-			&:after
-				transform rotate(-60deg)
-			&:before	
-				transform rotate(60deg)		
 		
 // Section map
 .sect__map
