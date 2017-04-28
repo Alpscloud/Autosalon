@@ -15,6 +15,9 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
+	<!-- Favicon -->
+	<link rel="icon" href=""> 
+
 	<!-- All libs styles -->
 	<link rel="stylesheet" href="css/libs.min.css">
 	<!-- Main file with styles -->
@@ -71,66 +74,71 @@
 
 		<!-- Header -->
 		<header class="header">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="nav__row">
-							<!-- Logo -->
-							<a href="#" class="logo logo__header">
-								<img src="img/logo-header.png" alt="АвтоТрейд" class="logo__img">
-								<h2 class="logo__title">Автотрейд<small>автомобили с пробегом</small></h2>
-							</a>
-							<!-- //Logo -->
 
-							<address class="address">г. Харьков, ул. Пушкинская 89</address>
+			<div class="header__row">
+				<div class="nav__row">
+					<!-- Logo -->
+					<a href="#" class="logo logo__header">
+						<img src="img/logo-header.png" alt="АвтоТрейд" class="logo__img">
+						<h2 class="logo__title">Автотрейд<small>автомобили с пробегом</small></h2>
+					</a>
+					<!-- //Logo -->
 
-							<div class="phones text-center">
-								<a href="tel:" class="phones__link">(066) 445-25-37</a>
-								<a href="tel:" class="phones__link">(066) 445-25-37</a>
-							</div>
+					<address class="address">г. Харьков, ул. Пушкинская 89</address>
 
-							<!-- Link -->
-							<div class="autoservice">
-								<a href="http://atsto.ru/" class="btn btn__accent btn__border" target="_blank">
-									<strong>автосервис АТ-центр</strong><br>
-									<small>информация и запись</small>
-								</a>
-							</div>
-							<!-- //Link -->
-
-							<!-- Sandwitch menu -->
-							<button type="button" id="hamburger" class="hamburger">
-								<span class="line"></span>	
-								<span class="line"></span>	
-								<span class="line"></span>	
-							</button>
-							<!-- //Sandwitch menu -->
-
-						</div>
+					<div class="phones text-center">
+						<a href="tel:" class="phones__link">(066) 445-25-37</a>
+						<a href="tel:" class="phones__link">(066) 445-25-37</a>
 					</div>
+
+					<!-- Link -->
+					<div class="autoservice">
+						<a href="http://atsto.ru/" class="btn btn__accent btn__border" target="_blank">
+							<strong>автосервис АТ-центр</strong><br>
+							<small>информация и запись</small>
+						</a>
+					</div>
+					<!-- //Link -->
+
+					
+
 				</div>
-				<!-- //row -->
 			</div>
+			<!-- //row -->
+
 			<!-- //container -->
 
 			<!-- Navigation -->
 			<nav class="nav__menu">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<ul class="nav__menu--list">
-								<li class="nav__menu--item"><a href="#" class="nav__menu--link active">Главная</a></li>
-								<li class="nav__menu--item"><a href="#" class="nav__menu--link">О компании</a></li>
-								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Купить</a></li>
-								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Продать</a></li>
-								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Обменять</a></li>
-								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Автосервис</a></li>
-								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Финансовые услуги</a></li>
-								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Акции</a></li>
-								<li class="nav__menu--item"><a href="#" class="nav__menu--link">Контакты</a></li>		
-							</ul>
-						</div>
+
+				<div class="header__row">
+					<!-- Link -->
+					<div class="autoservice autoservice__mobile">
+						<a href="http://atsto.ru/" class="btn btn__accent btn__border" target="_blank">
+							<strong>автосервис АТ-центр</strong><br>
+							<small>информация и запись</small>
+						</a>
 					</div>
+					<!-- //Link -->
+					<ul class="nav__menu--list" id="navMenu">
+						<li class="nav__menu--item"><a href="#" class="nav__menu--link active">Главная</a></li>
+						<li class="nav__menu--item"><a href="#" class="nav__menu--link">О компании</a></li>
+						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Купить</a></li>
+						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Продать</a></li>
+						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Обменять</a></li>
+						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Автосервис</a></li>
+						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Финансовые услуги</a></li>
+						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Акции</a></li>
+						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Контакты</a></li>		
+					</ul>
+					
+					<!-- Sandwitch menu -->
+					<button type="button" id="hamburger" class="hamburger">
+						<span class="line"></span>	
+						<span class="line"></span>	
+						<span class="line"></span>	
+					</button>
+					<!-- //Sandwitch menu -->
 				</div>
 			</nav>
 			<!--// Navigation -->
@@ -253,7 +261,7 @@
 			<div class="container">
 				<div class="row">
 					<!-- Card item -->
-					<div class="col-md-4">
+					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="auto__item">
 							<div class="auto__item--thumb">
 								<img src="img/example-item-img.png" alt="">
@@ -275,7 +283,7 @@
 					<!-- //Card item -->
 
 					<!-- Card item -->
-					<div class="col-md-4">
+					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="auto__item">
 							<div class="auto__item--thumb">
 								<img src="img/example-item-img-2.png" alt="">
@@ -296,7 +304,7 @@
 					<!-- //Card item -->
 
 					<!-- Card item -->
-					<div class="col-md-4">
+					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="auto__item">
 							<div class="auto__item--thumb">
 								<img src="img/example-item-img-3.png" alt="">
@@ -339,7 +347,7 @@
 			<div class="container">
 				<div class="row">
 					<!-- Card item -->
-					<div class="col-md-4">
+					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="auto__item">
 							<div class="auto__item--thumb">
 								<img src="img/example-item-img.png" alt="">
@@ -361,7 +369,7 @@
 					<!-- //Card item -->
 
 					<!-- Card item -->
-					<div class="col-md-4">
+					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="auto__item">
 							<div class="auto__item--thumb">
 								<img src="img/example-item-img-2.png" alt="">
@@ -382,7 +390,7 @@
 					<!-- //Card item -->
 
 					<!-- Card item -->
-					<div class="col-md-4">
+					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="auto__item">
 							<div class="auto__item--thumb">
 								<img src="img/example-item-img-3.png" alt="">
@@ -450,7 +458,7 @@
 			<div class="container">
 				<div class="row">
 					<!-- adv item -->
-					<div class="col-sm-4 col-xs-12 adv__item">
+					<div class="col-sm-4 col-xs-6 adv__item">
 						<div class="adv__block text-center">
 							<!-- Icon -->
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 39.53 39.53" style="enable-background:new 0 0 39.53 39.53;" xml:space="preserve" class="adv__block--ic">
@@ -477,7 +485,7 @@
 					</div>
 					<!-- //adv item -->
 					<!-- adv item -->
-					<div class="col-sm-4 col-xs-12 adv__item">
+					<div class="col-sm-4 col-xs-6 adv__item">
 						<div class="adv__block text-center">
 							<!-- Icon -->
 
@@ -495,7 +503,7 @@
 					</div>
 					<!-- //adv item -->
 					<!-- adv item -->
-					<div class="col-sm-4 col-xs-12 adv__item">
+					<div class="col-sm-4 col-xs-6 adv__item">
 						<div class="adv__block text-center">
 							<!-- Icon -->
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 311.404 311.404" style="enable-background:new 0 0 311.404 311.404;" xml:space="preserve" class="adv__block--ic">
@@ -511,7 +519,7 @@
 					</div>
 					<!-- //adv item -->
 					<!-- adv item -->
-					<div class="col-sm-4 col-xs-12 adv__item">
+					<div class="col-sm-4 col-xs-6 adv__item">
 						<div class="adv__block text-center">
 							<!-- Icon -->
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 357.25 357.25" style="enable-background:new 0 0 357.25 357.25;" xml:space="preserve" class="adv__block--ic">
@@ -525,7 +533,7 @@
 					</div>
 					<!-- //adv item -->
 					<!-- adv item -->
-					<div class="col-sm-4 col-xs-12 adv__item">
+					<div class="col-sm-4 col-xs-6 adv__item">
 						<div class="adv__block text-center">
 							<!-- Icon -->		
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="adv__block--ic">
@@ -549,7 +557,7 @@
 					</div>
 					<!-- //adv item -->
 					<!-- adv item -->
-					<div class="col-sm-4 col-xs-12 adv__item">
+					<div class="col-sm-4 col-xs-6 adv__item">
 						<div class="adv__block text-center">
 							<!-- Icon -->		
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="adv__block--ic">

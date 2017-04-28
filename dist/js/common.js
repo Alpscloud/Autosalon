@@ -1,4 +1,5 @@
 var ProjectApp = function (){
+	'use strict';
 	// ============================ All vars ================================
 	var copyrightYear = document.getElementById('year'),
 		callBackBtn = document.getElementById('callbackBtn'),
@@ -13,39 +14,11 @@ var ProjectApp = function (){
 		elem.classList.add(clas);
 	}
 	function removeClass(elem, clas) {
-		elem.classList.remove(clas);
+		elem.classList.remove(clas)
 	}	
 
 	// ============================================================
 
-	// ============================copyright year================================
-
-	function togglePopup(e) {
-		var target = e && e.target ? e.target : e.srcElement;
-		if(target.getAttribute('data-id') === 'show') {
-			removeClass(popupService, 'active');
-			addClass(overlay, 'active');
-			addClass(popup, 'active');
-			removeClass(popupService, 'active');
-		} else if (target.getAttribute('data-id') === 'close') {
-			removeClass(overlay, 'active');
-			removeClass(popup, 'active');
-			removeClass(popupService, 'active');
-		}
-	}
-
-	if(callBackBtn) {
-		callBackBtn.addEventListener('click', togglePopup);
-	}
-
-	if(overlay || closeBtn) {
-		overlay.addEventListener('click', togglePopup);
-		for(var i = 0; i < closeBtn.length; i++) {
-			closeBtn[i].addEventListener('click', togglePopup);
-		}
-		
-	}
-	// ============================================================
 	// ============================copyright year================================
 	var year = new Date(),
 		now = year.getFullYear();
@@ -66,74 +39,8 @@ $(document).ready(function() {
         $('.body-main').addClass('loaded');
     }, 3000);
 
-	$('.js-service').each(function() {
-		$(this).on('click', function () {
-			var title = $(this).parent().find('.service__item--title').text(),
-				popup = $('#popupService'),
-				formTitle = popup.find('.form__title'),
-				theme = popup.find('.mail__theme'),
-				message = popup.find('.form__input--textarea');
-
-			message.attr('name', 'Проблема');
-			message.attr('placeholder', 'Кратко опишите свою проблему');
-			formTitle.text(title);
-			theme.val(title);
-			$('#overlay').addClass('active');
-			popup.addClass('active');
-			
-
-		});
-		
-	});
-
-
-	$('.js-feedback').each(function() {
-		$(this).on('click', function () {
-			var title = 'Оставить свой отзыв',
-				popup = $('#popupService'),
-				formTitle = popup.find('.form__title'),
-				theme = popup.find('.mail__theme'),
-				message = popup.find('.form__input--textarea');
-
-
-			message.attr('name', 'Отзыв');
-			message.attr('placeholder', 'Ваш отзыв');
-			formTitle.text(title);
-			theme.val(title);
-			$('#overlay').addClass('active');
-			popup.addClass('active');
-			
-
-		});
-		
-	});
-
 
 	// ========= Smooth scroll to the anchor ===========
-	$('.smooth__scroll').on('click', function (event) {
-			event.preventDefault();
-			var id = $(this).attr('href'),
-				top = $(id).offset().top;
-
-			$('html, body').animate({scrollTop: top}, 'slow');
-		});
-	});	
-	
-
-	$('a.smoothScroll-link[href^="#"]').on('click', function(){
-		var html = $('body').width(),
-			scroll_el = $(this).attr('href');
-
-		if(html < 1000) {
-			 $(".nav__header .nav__list").slideToggle();
-		}
-	 
-		if ($(scroll_el).length != 0) {
-			$('html, body').animate({ scrollTop: $(scroll_el).offset().top - 70}, 500);
-		}
-			return false;
-		}
-	);
 	// ========= =========== =========== ===========
 
 	// ========= Mobile menu ===========
@@ -155,7 +62,11 @@ $(document).ready(function() {
 
 	// ========= Mobile menu ===========
 	$('#hamburger').on('click',function() {
-		$('.nav__header .nav__list').slideToggle(300);
+		var w = $('body').width();
+		if(w < 900) {
+			$('#navMenu').slideToggle(300);
+		}
+		
 	});
 
 	// ========= =========== =========== ===========
@@ -309,11 +220,6 @@ $(document).ready(function() {
 
 	}
 	
-
-	
-	
-	
-
 	// ========= =========== =========== ===========
 	
 	// ========= Remove validate classes ===========
@@ -366,7 +272,7 @@ $(document).ready(function() {
 			}, 2000);
 			return false;
 		});
-		
+	});	
 	// ========= =========== =========== ===========
 });
 // ========= =========== =========== ===========  ========= =========== =========== ===========

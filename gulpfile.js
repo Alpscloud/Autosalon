@@ -23,7 +23,9 @@ var gulp = require('gulp'),
 	// minify html files
 	htmlmin = require('gulp-htmlmin'),
 	// svg min
-	svgmin = require('gulp-svgmin');
+	svgmin = require('gulp-svgmin'),
+	// Errors
+	combiner = require('stream-combiner2').obj;
 
 
 
@@ -31,26 +33,27 @@ var gulp = require('gulp'),
 
 //Compile Stylus files to min.css + vendor + uncss
 gulp.task('styl', function() {
-	return gulp.src('./dist/styl/main.styl')
-		.pipe(stylus({
-			linenos: false
-		}))
-		.pipe(concatCss('style.css'))
-		.pipe(autoprefixer([
-			'Android 2.3',
-			'Android >= 4',
-			'Chrome >= 20',
-			'Firefox >= 24',
-			'Explorer >= 8',
-			'iOS >= 6',
-			'Opera >= 12',
-			'Safari >= 6'
-		]))
-		.pipe(cssmin())
-		.pipe(rename({
-		suffix: '.min'
-		}))
-		.pipe(gulp.dest('./dist/css/'));
+	return combiner(
+			gulp.src('./dist/styl/main.styl'),
+			stylus({linenos: false}),
+			concatCss('style.css'),
+			autoprefixer([
+				'Android 2.3',
+				'Android >= 4',
+				'Chrome >= 20',
+				'Firefox >= 24',
+				'Explorer >= 8',
+				'iOS >= 6',
+				'Opera >= 12',
+				'Safari >= 6'
+			]),
+			cssmin(),
+			rename({suffix: '.min'}),
+			gulp.dest('./dist/css/')
+		).on('error', function(err) {
+				console.log(err.message);
+				this.end();
+			})
 });
 
 
@@ -79,12 +82,15 @@ gulp.task('jsLibs', function () {
 
 // Common js file
 gulp.task('jsCommon', function () {
-	return gulp.src('./dist/js/common.js')
-		.pipe(uglify())
-		.pipe(rename({
-			suffix: '.min'
-		}))
-		.pipe(gulp.dest('./dist/js'));
+	return combiner(
+			gulp.src('./dist/js/common.js'),
+			uglify(),
+			rename({suffix: '.min'}),
+			gulp.dest('./dist/js/')
+		).on('error', function(err) {
+			console.log(err.message);
+			this.end();
+		})
 });
 
 // Concat all libs css files and libs js files

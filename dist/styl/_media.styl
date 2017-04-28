@@ -15,6 +15,15 @@
 +max-screen(1200px)
 	.nav__list--item
 		margin-right 20px
+		
+	// header
+	.autoservice
+		.btn
+			padding 10px 20px
+			
+	.form__callback 
+		.form__input--wrapp
+			max-width 320px
 +max-screen(1000px)
 	body
 		font-size 14px
@@ -23,8 +32,6 @@
 	.sect__title
 		margin-bottom 40px
 	
-	.header
-		padding-top 100px
 	
 	.logo__header
 		small
@@ -32,64 +39,94 @@
 		&:hover
 			h2
 				color $dark-color
+	.sect__first
+		margin-top -45px
+		padding 85px 0 40px
 	
-	.nav__header
+	.auto__item
+		&--title 
+			a
+				font-size 1.1em
+		&--info
+			font-size 1em
+	.service__item--descr
+		font-size 1.4em
+		
+	.form__callback
+		text-align center
+		.form__input--wrapp,
+		.btn
+			float none
+			max-width 100%
+		.form__input--wrapp
+			margin-bottom 25px
+			
++max-screen(900px)
+	.header
 		position fixed
 		top 0
 		left 0
 		width 100%
-		background $light-color
-		color $dark-color
 		z-index 10
 		box-shadow 0px 5px 20px 0px rgba($dark-color, 0.5)
 		margin-bottom 0
-		.nav__list
+		// background $light-color
+		color $dark-color
+		&__row
+			background $light-color
+	.autoservice
+		display none
+		&__mobile
+			display block
+			.btn
+				strong
+					font-size .9em
+	.nav__row
+		padding 10px 0
+	.nav__menu
+		position relative
+		background rgba(26,26,26,.85)
+		padding 10px 0
+		.header__row
+			background none
+			display flex
+			justify-content space-between
+			align-items center
+
+		&--list
 			position absolute
 			top 100%
 			left 0
+			right 0
 			width 100%
-			background $light-color
 			display none
-			&--item
-				display block
-				border-bottom 1px solid $accent-color
-				margin-right 0
-				&:last-child
-					border-bottom 0
-			&--link
-				padding 10px 0
-				text-align center
-				color $dark-color
+			background rgba(26,26,26, .95)
+		&--item
+			display block
+			border-bottom 1px solid $accent-color
+			margin-right 0
+			&:last-child
+				border-bottom 0
+		&--link
+			padding 10px 0
+			text-align center
+			color $light-color
+			display block
+			text-transform uppercase
+			letter-spacing 2px
 				
 		.nav__row
 			padding 15px 0
-		.phones
-			&__link
-				color $dark-color
-				display inline-block
-				margin-bottom 0
-				margin-right 5px
+		
 	.hamburger
 		display inline-block
 	
-	.hex
-		margin 0 auto
-	.feedback__item
-		margin-top 60px
-		margin-bottom 40px
-		&--info
-			display block
-			padding-left 0
-			margin-top 60px
-			text-align center
+	.sect__first
+		margin-top 0
+		padding-top 200px
 		
 +max-screen(767px)
-	.sect__feedback
-		.btn
-			margin-top 0
-	.feedback__item
-		margin-bottom 30px
-		display block
+	
 	.copy
 		text-align center
 		margin-bottom 20px
@@ -106,65 +143,58 @@
 		&__block
 			margin 0 auto
 			
-	.adv__block
-		padding-left 30px
-		margin-bottom 25px
-		.count
-			left 5px
+	
 	
 	.header
-		padding-bottom 40px
 		&__title
 			margin-bottom 25px
 			text-align center
-			
-	.service__item
-		height 250px
-		background-size cover !important
-		&--descr,
-		.btn
-			opacity 1
-			visibility visible
 		
-		&:hover
-			.service__item--title
-				top 0
-				left auto
-				transform none
-		&--info
-			padding 25px
-			border 1px solid $light-color
-		&--title
-			position relative
-			top 0
-			transform none
-			left auto
-			color $light-color
+	.auto__item
+		margin 0 auto 25px auto
+		max-width 420px
+		
+	.service__item
+		width 50%
+		
+	.sect__first
+		padding-top 170px
+		
+	
+	.adv__item
+		padding 0
+		border-bottom 2px solid #d3d5d7
+		border-right 2px solid #d3d5d7
+		height 250px
+		
+		&:nth-child(3)
+			border-right 2px solid #d3d5d7
+		&:nth-child(4)
+			border-bottom 2px solid #d3d5d7
+
+	
 			
 +max-screen(700px)
+	.btn__accent
+		padding 10px 30px
 	body
 		font-size 12px
-	.header
-		padding-top 140px
 	.nav__header
 		.nav__row
 			display block
-	.logo__header
 
-		margin 0 auto 10px auto
 	
-	.hamburger
-		position absolute
-		right 30px
-		top 15px
-	
-	.sect__brands
-		padding 20px 0
+	.adv__item
+		height 200px
+	.adv__block--ic
+		width 50px
+		height 50px
 		
 	.btn__up
 		right 10px
 	
-
+	.header__title
+		font-size 2em
 	
 	.nav__footer
 		.nav__row
@@ -174,7 +204,29 @@
 		.nav__list
 			margin 15px 0
 			
++max-screen(600px)
+	.phones,
+	.address
+		font-size 0.8333em
+	.phones
+		padding-left 20px
+	.address
+		padding-left 15px
+	.nav__row
+		.logo__title
+			font-size 1em
+			
 +max-screen(450px)
+	.form__input
+		padding 10px
+	.service__item
+		height 140px
+		&--descr
+			font-size 1em
+	.adv__item
+		height 170px
+	.adv__block--title
+		font-size .8em
 	.nav__footer
 		.nav__list
 			&--item
@@ -183,10 +235,26 @@
 			&--link
 				padding 10px 0
 				
-	.btn__close
-		right 5px
+	.nav__row
+		display block
+		.logo
+			margin 0 auto 10px auto
+		.address
+			padding-right 20px
+			display inline-block
+			vertical-align middle
+		.phones
+			display inline-block
+			vertical-align middle
+			a
+				display block
+				text-align left
+				
+	.sect__first
+		padding-top 180px
+				
+
 			
-		
 
 +max-screen(350px)
 	.hamburger
@@ -194,6 +262,4 @@
 		top auto
 	.phones
 		text-align left
-		.btn
-			margin-top 10px
-			width 100%
+
