@@ -1,0 +1,42 @@
+@import '_vars.styl'
+
+// BUY
+.articles
+	&__item
+		border-radius 10px
+		background $dark-color
+		display flex
+		justify-content space-between
+		overflow hidden
+		margin-bottom 25px
+		&--thumbnail
+			flex-basis 30%
+			
+			a
+				display block
+				height 100%
+				&:hover
+					opacity .9
+			img
+				display block
+				height 100%
+				
+	.auto__item--descr
+		flex-basis 70%
+		background transparent
+	.auto__item--title
+		margin-bottom 0
+		
+.auto__item
+	&--properties
+		text-align left
+		.auto__item--info
+			display inline-block
+			margin-right 15px
+			font-size 1.1em
+			&:last-child
+				margin-right 0
+	&--text
+		font-size 0.875em
+		margin 15px 0
+				

@@ -221,6 +221,11 @@ $(document).ready(function() {
 	}
 	
 	// ========= =========== =========== ===========
+	// ========= Toggle advanced sidebar form ===========
+	$('.js-form-more-btn').on('click', function() {
+		$('.more__filter').slideToggle('slow');
+	});
+	// ========= =========== =========== ===========
 	
 	// ========= Remove validate classes ===========
 	$('.form__input--validate').on('focus',function() {

@@ -1,0 +1,27 @@
+@import '_vars.styl'
+
+.breadcrumbs
+	margin-top 15px
+	&__list
+		&--item
+			display inline-block
+			margin-right 16px
+			position relative	
+			&:after
+				content '/'
+				right -12px
+				top 0
+				color $light-text-color
+				position absolute
+			&:last-child
+				margin-right 0
+				&:after
+					display none
+		&--link
+			font 1em $Med
+			color $light-text-color
+			&.active
+				color darken($light-text-color, 60%)
+			&:hover,
+			&:focus
+				color darken($light-text-color, 60%)
