@@ -9,6 +9,8 @@
 		background #1a1a1a
 		background rgba(#1a1a1a, .85)
 		padding 0 25px 25px 25px
+	&__body
+		padding 0 25px 25px 25px
 	&__input
 		width 100%
 		display block
@@ -106,6 +108,12 @@
 				cursor pointer
 			.required
 				right 30px
+			&--wide
+				width 100%
+				float none
+				margin-right 0
+				div
+					width 100%
 	&__input--select
 		width 47%
 		&:first-child
@@ -117,7 +125,12 @@
 		align-items center
 		.btn
 			width 48%
-			
+textarea.form__input
+	resize vertical
+	min-height 144px
+.no-arrow
+	&:after
+		display none		
 .more__search
 	text-transform uppercase
 	text-decoration underline

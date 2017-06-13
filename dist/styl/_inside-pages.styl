@@ -48,4 +48,55 @@
 	background-size cover
 	background-position center
 	background-repeat no-repeat
+	
+// Sell page
+.links__row
+	display flex
+	justify-content space-between
+	align-items center
+	margin-bottom 30px
+	
+.work__item
+	text-align center
+	position relative
+	transition all .23s ease-in-out
+	&:hover
+		.work__item--ic
+			background $accent-color
+		svg
+			fill $form-bg
+	&:after
+		display block
+		content ''
+		position absolute
+		top 60px
+		right -40px
+		background url('../img/arrow.svg') center no-repeat
+		width 55px
+		height 45px
+	&--no--arrow
+		&:after
+			display none
+	&--svg
+		display inline-block
+		width 72px
+		height 85px
+		fill $accent-color
+		transition all .23s ease-in-out
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		
+	&--ic
+		border-radius 50%
+		width 160px
+		height 160px
+		background-color $form-bg
+		background-repeat no-repeat
+		background-position center center
+		margin 0 auto 10px auto
+		position relative
+		&.request
+			background red
 				

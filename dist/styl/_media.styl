@@ -12,6 +12,9 @@
 	.sect__first
 		padding 130px 0 80px 0
 		
+	.box
+		padding 50px 0
+		
 +max-screen(1200px)
 	.nav__list--item
 		margin-right 20px
@@ -28,6 +31,9 @@
 	// About
 	.about__img
 		min-height 300px
+		
+	.btn__accent--strong
+		max-width 270px
 +max-screen(1000px)
 	body
 		font-size 14px
@@ -68,6 +74,23 @@
 	// About
 	.about__img
 		min-height 200px
+		
+	// Sell
+	.work__item
+		&:after
+			top 45px
+		&--ic
+			width 130px
+			height 130px
+			
+	textarea.form__input
+		min-height 138px
+		
+	.btn__accent--strong
+		max-width 200px
+		padding-left 10px
+		padding-right 10px
+		font-size 12px
 			
 +max-screen(900px)
 	.header
@@ -187,6 +210,13 @@
 	.about__img
 		margin-bottom 25px
 		
+	.work__item
+		margin-bottom 30px
+		&--noarrow--mobile
+			&:after
+				display none
+		
+	
 
 	
 			
@@ -220,6 +250,17 @@
 		.nav__list
 			margin 15px 0
 			
+	.form__title
+		margin-bottom 20px
+		
+	.links__row
+		display block
+		.btn
+			display block
+			max-width 100%
+			margin-bottom 15px
+			&:last-child
+				margin-bottom 0
 +max-screen(600px)
 	.phones,
 	.address
@@ -231,6 +272,13 @@
 	.nav__row
 		.logo__title
 			font-size 1em
+			
+	.articles__item
+		display block
+		
+	.main
+		padding-top 200px
+		
 			
 +max-screen(450px)
 	.form__input
@@ -270,7 +318,30 @@
 		padding-top 180px
 				
 
+	// Sell
+	.work__item
+		&:after
+			top 36px
+			right -36px
+			width 40px
+			height 30px
+		&--ic
+			width 100px
+			height 100px
+		&--svg
+			width 40px
+			height 53px
 			
+	.form__input--row
+		margin-bottom 10px
+			
+	
+		
+	// .btn__accent--strong
+	// 	max-width 200px
+	// 	padding-left 10px
+	// 	padding-right 10px
+	// 	font-size 12px	
 
 +max-screen(350px)
 	.hamburger
