@@ -14,6 +14,7 @@
     "tests"
   ],
   "devDependencies": {
-    "magnific-popup": "^1.1.0"
+    "magnific-popup": "^1.1.0",
+    "fotorama": "^4.6.4"
   }
 }
