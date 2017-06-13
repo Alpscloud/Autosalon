@@ -97,8 +97,69 @@
 		background-position center center
 		margin 0 auto 10px auto
 		position relative
-		&.request
-			background red
+
+	
+.sell__item
+	text-align center
+	position relative
+	transition all .23s ease-in-out
+	padding 20px
+	border 2px solid transparent
+
+	&:hover
+		border-color $form-bg
+		.sell__item--ic
+			background $accent-color
+		.sell__item--title
+			color $accent-color
+			&:before
+				background $form-bg
+		svg
+			fill $form-bg
+	
+	p
+		margin-bottom 25px
+	
+	&--title
+		text-transform uppercase
+		font 1.2em $Med
+		position relative
+		margin-bottom 30px
+		color $form-bg
+		display block
+		&:before
+			content ''
+			width 25px
+			height 2px
+			background $accent-color
+			display inline-block
+			position absolute
+			left 50%
+			transform translateX(-50%)
+			bottom -15px
+			transition all .23s ease-in-out
+			
+	&--svg
+		display inline-block
+		width 72px
+		height 85px
+		fill $accent-color
+		transition all .23s ease-in-out
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		
+	&--ic
+		border-radius 50%
+		width 160px
+		height 160px
+		background-color $form-bg
+		background-repeat no-repeat
+		background-position center center
+		margin 0 auto 10px auto
+		position relative
+		
 				
 // Finance
 .sect__finance
@@ -107,6 +168,19 @@
 	margin-top 25px
 	text-align left
 	font-size 1.125em
+
+.page__block--title
+	text-transform uppercase
+	font 1.3em $Med
+	padding-bottom 4px
+	border-bottom 2px solid $accent-color
+	text-align left
+	margin-bottom 25px
+
+.finance__img
+	img
+		display block
+		
 	
 // Special offer
 .special__offer--block
