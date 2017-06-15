@@ -100,7 +100,7 @@
 						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Купить</a></li>
 						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Продать</a></li>
 						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Обменять</a></li>
-						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Автосервис</a></li>
+			
 						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Финансовые услуги</a></li>
 						<li class="nav__menu--item"><a href="#" class="nav__menu--link">Акции</a></li>
 						<li class="nav__menu--item"><a href="#" class="nav__menu--link">О компании</a></li>
@@ -129,7 +129,7 @@
 						<!-- Aside -->
 						<aside class="aside">
 							<!-- Search form -->
-							<form  class="form form__header form__contact text-center">
+							<form  class="form form__header text-center">
 								<!-- Title -->
 								<h3 class="form__title">Подобрать авто</h3>
 								<!-- //Title -->
@@ -139,7 +139,7 @@
 								<div class="form__input--wrapp">
 									<p class="form__input--label text-left">Марка</p>
 									<div>
-										<select name="Марка" class="form__input form__input--validate">
+										<select name="Марка" class="form__input form__input--validate" id="carBrand">
 											<option value="" selected>Все марки</option>
 											<option value="Mercedes Benz">Mercedes Benz</option>
 											<option value="BMW">BMW</option>
@@ -158,7 +158,7 @@
 								<div class="form__input--wrapp">
 									<p class="form__input--label text-left">Модель</p>
 									<div>
-										<select name="Модель" class="form__input">
+										<select name="Модель" class="form__input" id="carModel">
 											<option value="" selected>Все модели</option>
 											<option value="Mercedes Benz">Mercedes Benz</option>
 											<option value="BMW">BMW</option>
@@ -175,8 +175,9 @@
 									<div>
 										<select name="Год выпуска" class="form__input">
 											<option value="" selected>Не важно</option>
-											<option value="1992">1992</option>
-											<option value="1992">1992</option>
+											<option value="3">до 3 лет</option>
+											<option value="5">до 5 лет</option>
+											<option value="10">до 10 лет</option>
 										</select>
 									</div>
 								</div>
@@ -207,12 +208,16 @@
 								<div class="more__filter">
 									<!-- Select item -->
 									<div class="form__input--wrapp">
-										<p class="form__input--label text-left">Год выпуска</p>
+										<p class="form__input--label text-left">Тип кузова</p>
 										<div>
-											<select name="Год выпуска" class="form__input">
-												<option value="" selected>Не важно</option>
-												<option value="1992">1992</option>
-												<option value="1992">1992</option>
+											<select name="Тип кузова" class="form__input">
+												<option value="Любой" selected>Любой</option>
+												<option value="Седан">Седан</option>
+												<option value="Хетчбек">Хетчбек</option>
+												<option value="Универсал">Универсал</option>
+												<option value="Внедорожник">Внедорожник</option>
+												<option value="Минивен">Минивен</option>
+												<option value="Пикап">Пикап</option>
 											</select>
 										</div>
 									</div>
@@ -220,12 +225,12 @@
 
 									<!-- Select item -->
 									<div class="form__input--wrapp">
-										<p class="form__input--label text-left">Год выпуска</p>
+										<p class="form__input--label text-left">Тип двигателя</p>
 										<div>
 											<select name="Год выпуска" class="form__input">
 												<option value="" selected>Не важно</option>
-												<option value="1992">1992</option>
-												<option value="1992">1992</option>
+												<option value="Дизель">Дизель</option>
+												<option value="Бензин">Бензин</option>
 											</select>
 										</div>
 									</div>
@@ -233,12 +238,26 @@
 
 									<!-- Select item -->
 									<div class="form__input--wrapp">
-										<p class="form__input--label text-left">Год выпуска</p>
+										<p class="form__input--label text-left">КПП</p>
 										<div>
 											<select name="Год выпуска" class="form__input">
 												<option value="" selected>Не важно</option>
-												<option value="1992">1992</option>
-												<option value="1992">1992</option>
+												<option value="Автомат">Автомат</option>
+												<option value="Механика">Механика</option>
+											</select>
+										</div>
+									</div>
+									<!-- //Select item -->
+
+									<!-- Select item -->
+									<div class="form__input--wrapp">
+										<p class="form__input--label text-left">Тип привода</p>
+										<div>
+											<select name="Год выпуска" class="form__input">
+												<option value="" selected>Не важно</option>
+												<option value="Передний">Передний</option>
+												<option value="Задний">Задний</option>
+												<option value="Полный">Полный</option>
 											</select>
 										</div>
 									</div>
@@ -458,6 +477,11 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
 						<form class="form__contact form__callback clearfix">
+							<!-- Hidden inputs -->
+							<input type="hidden" name="project_name" value="Заявка с сайта НАЗВАНИЕ САЙТА">
+							<input type="hidden" name="admin_email" value="mail@mail">
+							<input type="hidden" name="form_subject" value="Обратный звонок">
+							<!-- // Hidden inputs -->
 							<div class="form__input--wrapp left">
 								<input type="tel" class="form__input form__input--validate" placeholder="Ваш номер телефона">
 								<span class="required hidden">Введите номер!</span>

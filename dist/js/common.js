@@ -237,6 +237,22 @@ $(document).ready(function() {
 	});
 	// ========= =========== =========== ===========
 
+	$('#carBrand').on('click', function() {
+		var carModel = $('#carModel');
+		if($(this).val() !== '') {
+			if(carModel.hasClass('inactive')) {
+				carModel.removeClass('inactive');
+				carModel.removeAttr('disabled');
+			} else {
+				carModel.addClass('inactive');
+				carModel.attr('disabled');
+			}
+
+		}
+		
+		
+	});
+
 	// ========= Ajax form ===========
 	$(".form__contact").submit(function(e) {
 		e.preventDefault();
@@ -264,12 +280,7 @@ $(document).ready(function() {
 			$('#overlay').addClass('active');
 			$('#thanks').addClass('active');
 
-			if($("#popup").hasClass('active')) {
-				$('#popup').removeClass('active');
-			}
-			if($("#popupService").hasClass('active')) {
-				$('#popupService').removeClass('active');
-			}
+			
 			setTimeout(function() {
 				$('#overlay').removeClass('active');
 				$('#thanks').removeClass('active');
