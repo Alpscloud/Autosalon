@@ -96,7 +96,7 @@ $(document).ready(function() {
 	var latitude = 56.625860,
 		longitude = 47.934437,
 		map_zoom = 16,
-		marker_url = 'img/map-ic.png';
+		marker_url = 'wp-content/themes/wfs-avto/img/map-ic.png';
 		// Styles
 	var style =  [
 						{elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -237,6 +237,8 @@ $(document).ready(function() {
 	});
 	// ========= =========== =========== ===========
 
+
+
 	$('#carBrand').on('click', function() {
 		var carModel = $('#carModel');
 		if($(this).val() !== '') {
@@ -273,7 +275,7 @@ $(document).ready(function() {
 
 		$.ajax({
 			type: "POST",
-			url: "mail.php", //Change
+			url: "wp-content/themes/wfs-avto/mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
 			
@@ -290,5 +292,17 @@ $(document).ready(function() {
 		});
 	});	
 	// ========= =========== =========== ===========
+
+	// Fancybox
+	$(".fancybox").fancybox({
+		openEffect  : 'elastic',
+		closeEffect : 'elastic'
+	  });
+
+	$('.bxslider').bxSlider({
+		adaptiveHeight: true,
+  		pagerCustom: '#bx-pager'
+  		
+	});
 });
 // ========= =========== =========== ===========  ========= =========== =========== ===========
